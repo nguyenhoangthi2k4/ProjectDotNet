@@ -1,0 +1,11 @@
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\bin\Debug\BLL.dll
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\bin\Debug\BLL.pdb
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\bin\Debug\DAL.dll
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\bin\Debug\DTO.dll
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\bin\Debug\DAL.pdb
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\bin\Debug\DTO.pdb
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\obj\Debug\BLL.dll
+D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\2022 - 2026\\HOC KI 5\\C#\\Project\\QuanLyHocSinh\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\project\\quanlyhocsinh\\quanlyhocsinh\\frmquanlygv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|solutionrelative:quanlyhocsinh\\frmquanlygv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\project\\quanlyhocsinh\\dal\\giaoviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|solutionrelative:dal\\giaoviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\project\\quanlyhocsinh\\quanlyhocsinh\\frmquanlygv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|solutionrelative:quanlyhocsinh\\frmquanlygv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE1CA7A-D7C7-45C5-A60C-0622BF4E3255}|BLL\\BLL.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\project\\quanlyhocsinh\\bll\\giaovienbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE1CA7A-D7C7-45C5-A60C-0622BF4E3255}|BLL\\BLL.csproj|solutionrelative:bll\\giaovienbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmQuanLyGV.cs",
+              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\Project\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyGV.cs",
+              "RelativeDocumentMoniker": "QuanLyHocSinh\\frmQuanLyGV.cs",
+              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\Project\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyGV.cs",
+              "RelativeToolTip": "QuanLyHocSinh\\frmQuanLyGV.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswCIAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T04:15:06.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GiaoVienDAL.cs",
+              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\Project\\QuanLyHocSinh\\DAL\\GiaoVienDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\GiaoVienDAL.cs",
+              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\Project\\QuanLyHocSinh\\DAL\\GiaoVienDAL.cs",
+              "RelativeToolTip": "DAL\\GiaoVienDAL.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T04:22:25.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GiaoVienBLL.cs",
+              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\Project\\QuanLyHocSinh\\BLL\\GiaoVienBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\GiaoVienBLL.cs",
+              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\Project\\QuanLyHocSinh\\BLL\\GiaoVienBLL.cs",
+              "RelativeToolTip": "BLL\\GiaoVienBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T04:25:58.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmQuanLyGV.cs [Design]",
+              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\Project\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyGV.cs",
+              "RelativeDocumentMoniker": "QuanLyHocSinh\\frmQuanLyGV.cs",
+              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\Project\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyGV.cs [Design]",
+              "RelativeToolTip": "QuanLyHocSinh\\frmQuanLyGV.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T04:19:20.389Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
