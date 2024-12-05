@@ -8,7 +8,7 @@ namespace DTO
 {
     public class GiaoVien : TaiKhoan
     {
-        private string _maGV, _tenGV, _ngaySinh, _soDT, _diaChi, _email, _gioiTinh, _monGD, _maToGV;
+        private string _maGV, _tenGV, _ngaySinh, _soDT, _queQuan, _email, _gioiTinh, _monGD, _maToGV;
         ToGV toGV = new ToGV();
 
         public GiaoVien():base()
@@ -19,7 +19,7 @@ namespace DTO
         public string TenGV { get => _tenGV; set => _tenGV = value; }
         public string NgaySinh { get => _ngaySinh; set => _ngaySinh = value; }
         public string SoDT { get => _soDT; set => _soDT = value; }
-        public string DiaChi { get => _diaChi; set => _diaChi = value; }
+        public string  QueQuan{ get => _queQuan; set => _queQuan = value; }
         public string Email { get => _email; set => _email = value; }
         public string GioiTinh { get => _gioiTinh; set => _gioiTinh = value; }
         public string MonGD { get => _monGD; set => _monGD = value; }

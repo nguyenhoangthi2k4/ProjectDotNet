@@ -20,9 +20,22 @@ namespace BLL
             return ToGVDAL.GetDataSet().Tables["tblTOGV"];
         }
 
-        public int Insert(ToGV toGV)
+        public bool CheckInput(ToGV toGV)
         {
+            if (toGV.TenToGV == "" || toGV.MaToGV == "" || toGV.MaToGV.Length != 5)
+                return false;
+            return true;
+        }
+        public string Insert(ToGV toGV)
+        {
+            if (this.CheckInput(toGV) == false)
+                return "Nhập thông tin không chính xác";
             return ToGVDAL.Insert(toGV);
+        }
+
+        public void Save()
+        {
+            ToGVDAL.Save();
         }
     }
 }

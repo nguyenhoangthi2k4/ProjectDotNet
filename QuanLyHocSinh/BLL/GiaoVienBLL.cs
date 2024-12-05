@@ -11,35 +11,28 @@ namespace BLL
 {
     public class GiaoVienBLL
     {
-        GiaoVienDAL giaoVienDAL = new GiaoVienDAL();        
-        TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
-
+        GiaoVienDAL giaoVienDAL = new GiaoVienDAL(); 
         public DataTable GetData()
         {
             return giaoVienDAL.GetDataSet().Tables["tblGIAOVIEN"];
         }
-
-        public int Insert(GiaoVien giaoVien)
+        public bool CheckInput(GiaoVien giaoVien)
         {
-            // Insert thông tin Giáo viên vào bảng Login_Table
-            //TaiKhoan tk = new TaiKhoan();
-            //tk.Taikhoan = giaoVien.Taikhoan;
-            //tk.Matkhau = giaoVien.Matkhau;
-            //tk.Quyen = "GV";
-            //int resultTK = taiKhoanBLL.Insert(tk);
-
-            // Insert thông tin Giáo viên vào bảng Giao viên
-            int resultGV = giaoVienDAL.Insert(giaoVien);            
-
-            // Kiểm tra nếu Insert
-            if (resultGV == 1) //&& resultTK == 1)
-                return 1;
-            else return 0;
+            if (giaoVien.MaGV == "" || giaoVien.MaGV.Length != 5 || giaoVien.TenGV == "" || giaoVien.SoDT == "" || giaoVien.SoDT.Length != 10 || giaoVien.MonGD == "" || giaoVien.Email == "" || giaoVien.QueQuan == "")
+                return false;
+            return true;
+        }
+        public string Insert(GiaoVien giaoVien)
+        {
+            if(this.CheckInput(giaoVien) == false)
+                return "Nhập thông tin không chính xác";
+            return giaoVienDAL.Insert(giaoVien); 
         }
 
         public void Save()
         {
-            giaoVienDAL.Save();           
+            giaoVienDAL.Save();
         }
+       
     }
 }

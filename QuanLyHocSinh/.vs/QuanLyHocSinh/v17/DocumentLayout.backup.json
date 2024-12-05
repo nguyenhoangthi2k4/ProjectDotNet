@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\projectdotnet\\quanlyhocsinh\\dal\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|solutionrelative:dal\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\dal\\giaoviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\projectdotnet\\quanlyhocsinh\\dal\\giaoviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|solutionrelative:dal\\giaoviendal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AE1CA7A-D7C7-45C5-A60C-0622BF4E3255}|BLL\\BLL.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\projectdotnet\\quanlyhocsinh\\bll\\giaovienbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AE1CA7A-D7C7-45C5-A60C-0622BF4E3255}|BLL\\BLL.csproj|solutionrelative:bll\\giaovienbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\projectdotnet\\quanlyhocsinh\\quanlyhocsinh\\frmquanlygv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|solutionrelative:quanlyhocsinh\\frmquanlygv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\projectdotnet\\quanlyhocsinh\\dal\\taikhoandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|solutionrelative:dal\\taikhoandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\projectdotnet\\quanlyhocsinh\\quanlyhocsinh\\frmquanlygv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|solutionrelative:quanlyhocsinh\\frmquanlygv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +22,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GiaoVienDAL.cs",
+              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\GiaoVienDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\GiaoVienDAL.cs",
+              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\GiaoVienDAL.cs",
+              "RelativeToolTip": "DAL\\GiaoVienDAL.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T12:56:30.95Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmQuanLyGV.cs",
+              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyGV.cs",
+              "RelativeDocumentMoniker": "QuanLyHocSinh\\frmQuanLyGV.cs",
+              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyGV.cs",
+              "RelativeToolTip": "QuanLyHocSinh\\frmQuanLyGV.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T13:00:11.593Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -54,68 +74,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Connection.cs",
-              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\Connection.cs",
-              "RelativeDocumentMoniker": "DAL\\Connection.cs",
-              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\Connection.cs*",
-              "RelativeToolTip": "DAL\\Connection.cs*",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAEwEQAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:34:26.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GiaoVienBLL.cs",
-              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\BLL\\GiaoVienBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\GiaoVienBLL.cs",
-              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\BLL\\GiaoVienBLL.cs",
-              "RelativeToolTip": "BLL\\GiaoVienBLL.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAEwCkAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:02:57.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TaiKhoanDAL.cs",
-              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\TaiKhoanDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\TaiKhoanDAL.cs",
-              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\TaiKhoanDAL.cs",
-              "RelativeToolTip": "DAL\\TaiKhoanDAL.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAEwDkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:02:19.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmQuanLyGV.cs",
+              "Title": "frmQuanLyGV.cs [Design]",
               "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyGV.cs",
               "RelativeDocumentMoniker": "QuanLyHocSinh\\frmQuanLyGV.cs",
-              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyGV.cs",
-              "RelativeToolTip": "QuanLyHocSinh\\frmQuanLyGV.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAkwEMAAAAyAAAAAAAAAA==",
+              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyGV.cs [Design]",
+              "RelativeToolTip": "QuanLyHocSinh\\frmQuanLyGV.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T00:48:38.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GiaoVienDAL.cs",
-              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\GiaoVienDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\GiaoVienDAL.cs",
-              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\GiaoVienDAL.cs",
-              "RelativeToolTip": "DAL\\GiaoVienDAL.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwEcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:14:19.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T12:02:53.486Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

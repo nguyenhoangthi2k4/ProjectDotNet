@@ -36,7 +36,7 @@
             this.grbTTCT = new System.Windows.Forms.GroupBox();
             this.cbQuyen = new System.Windows.Forms.ComboBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTenDN = new System.Windows.Forms.TextBox();
             this.txtMaSo = new System.Windows.Forms.TextBox();
             this.lblQuyen = new System.Windows.Forms.Label();
             this.lblTenDN = new System.Windows.Forms.Label();
@@ -97,6 +97,7 @@
             this.btnLuu.TabStop = false;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -111,7 +112,7 @@
             // 
             this.grbTTCT.Controls.Add(this.cbQuyen);
             this.grbTTCT.Controls.Add(this.txtMatKhau);
-            this.grbTTCT.Controls.Add(this.textBox4);
+            this.grbTTCT.Controls.Add(this.txtTenDN);
             this.grbTTCT.Controls.Add(this.txtMaSo);
             this.grbTTCT.Controls.Add(this.lblQuyen);
             this.grbTTCT.Controls.Add(this.lblTenDN);
@@ -139,12 +140,12 @@
             this.txtMatKhau.Size = new System.Drawing.Size(200, 26);
             this.txtMatKhau.TabIndex = 4;
             // 
-            // textBox4
+            // txtTenDN
             // 
-            this.textBox4.Location = new System.Drawing.Point(146, 118);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 26);
-            this.textBox4.TabIndex = 4;
+            this.txtTenDN.Location = new System.Drawing.Point(146, 118);
+            this.txtTenDN.Name = "txtTenDN";
+            this.txtTenDN.Size = new System.Drawing.Size(200, 26);
+            this.txtTenDN.TabIndex = 4;
             // 
             // txtMaSo
             // 
@@ -197,6 +198,7 @@
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // lblQLTK
             // 
@@ -236,7 +238,7 @@
         private System.Windows.Forms.Label lblMaSo;
         private System.Windows.Forms.Label lblQLTK;
         private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTenDN;
         private System.Windows.Forms.TextBox txtMaSo;
         private System.Windows.Forms.Label lblTenDN;
         private System.Windows.Forms.GroupBox groupBox2;

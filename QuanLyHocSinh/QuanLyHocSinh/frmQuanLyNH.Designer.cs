@@ -106,6 +106,7 @@
             this.dgvDanhSachNH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSachNH.Size = new System.Drawing.Size(420, 304);
             this.dgvDanhSachNH.TabIndex = 4;
+            this.dgvDanhSachNH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachNH_CellContentClick);
             // 
             // txtNamHoc
             // 

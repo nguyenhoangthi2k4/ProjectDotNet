@@ -68,6 +68,18 @@ namespace QuanLyHocSinh
             }    
         }
 
-       
+        private void dgvDanhSachNH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgvDanhSachNH.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = this.dgvDanhSachNH.SelectedRows[0];
+                this.txtNamHoc.Text = row.Cells[0].Value.ToString();
+                if (row.Cells[1].Value.ToString() == "1")
+                    this.cbHocKy.SelectedIndex = 0;
+                else
+                    this.cbHocKy.SelectedIndex = 1;
+
+            }
+        }
     }
 }

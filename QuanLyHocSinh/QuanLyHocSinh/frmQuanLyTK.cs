@@ -15,15 +15,25 @@ namespace QuanLyHocSinh
     public partial class frmQuanLyTK : Form
     {
         TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
+        TaiKhoan tk = new TaiKhoan();
         public frmQuanLyTK()
         {
             InitializeComponent();
+            
             this.dgvDanhSach.DataSource = taiKhoanBLL.GetData();
-            this.dgvDanhSach.Columns[0].HeaderText = "Tên Đăng Nhập";
-            this.dgvDanhSach.Columns[1].HeaderText = "Mật khẩu";
-            this.dgvDanhSach.Columns[2].HeaderText = "Quyền";
+            this.dgvDanhSach.Columns["USERNAME"].HeaderText = "Tên Đăng Nhập";
+            this.dgvDanhSach.Columns["PASSWORD"].HeaderText = "Mật khẩu";
+            this.dgvDanhSach.Columns["QUYEN"].HeaderText = "Quyền";
         }
 
-        
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            taiKhoanBLL.Save();
+        }
     }
 }

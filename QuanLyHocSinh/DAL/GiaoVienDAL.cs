@@ -12,31 +12,37 @@ namespace DAL
     public class GiaoVienDAL : Connection
     {
         private SqlDataAdapter _da;
+        private SqlDataAdapter _daTk;
 
         public GiaoVienDAL()
         {
-            string strSQL = "SELECT gv.*, lg.PASSWORD FROM GIAOVIEN gv, LOGIN_TABLE lg WHERE gv.USERNAME = lg.USERNAME";
+            string strSQL = "SELECT * FROM GIAOVIEN";
+            string strSQLTK = "SELECT * FROM LOGIN_TABLE";
             _da = new SqlDataAdapter(strSQL, Conn);
+            _daTk = new SqlDataAdapter(strSQLTK, Conn);
             GiaoVien gv = new GiaoVien();
 
             // InsertCommand
-            string ISQL = @"INSERT INTO GIAOVIEN(MAGV, HOTEN, NGAYSINH, DIACHI, EMAIL, SODT, GIOITINH, MATOGV, USERNAME, MONGD) VALUES (@MAGV, @HOTEN, @NGAYSINH, @DIACHI, @EMAIL, @SODT, @GIOITINH, @MATOGV, @USERNAME, @MONGD)";
-            SqlCommand Icmd = new SqlCommand(ISQL, Conn);
-            Icmd.Parameters.Add("@MAGV", SqlDbType.NVarChar, 5, "MAGV");
-            Icmd.Parameters.Add("@HOTEN", SqlDbType.NVarChar, 255, "HOTEN");
-            Icmd.Parameters.Add("@NGAYSINH", SqlDbType.Date, 10, "NGAYSINH");
-            Icmd.Parameters.Add("@DIACHI", SqlDbType.NVarChar, 255, "DIACHI");
-            Icmd.Parameters.Add("@EMAIL", SqlDbType.NVarChar, 255, "EMAIL");
-            Icmd.Parameters.Add("@SODT", SqlDbType.NVarChar, 20, "SODT");
-            Icmd.Parameters.Add("@GIOITINH", SqlDbType.NVarChar, 10, "GIOITINH");
-            Icmd.Parameters.Add("@MATOGV", SqlDbType.NVarChar, 10, "MATOGV");
-            Icmd.Parameters.Add("@USERNAME", SqlDbType.NVarChar, 50, "USERNAME");
-            Icmd.Parameters.Add("@MONGD", SqlDbType.NVarChar, 30, "MONGD");
-            _da.InsertCommand = Icmd;
-        }
+            //string ISQL = @"INSERT INTO GIAOVIEN(MAGV, HOTEN, NGAYSINH, QUEQUAN, EMAIL, SODT, GIOITINH, MATOGV, MONGD) VALUES (@MAGV, @HOTEN, @NGAYSINH, @QUEQUAN, @EMAIL, @SODT, @GIOITINH, @MATOGV, @MONGD)";
+            //SqlCommand Icmd = new SqlCommand(ISQL, Conn);
+            //Icmd.Parameters.Add("@MAGV", SqlDbType.NVarChar, 5, "MAGV");
+            //Icmd.Parameters.Add("@HOTEN", SqlDbType.NVarChar, 255, "HOTEN");
+            //Icmd.Parameters.Add("@NGAYSINH", SqlDbType.Date, 10, "NGAYSINH");
+            //Icmd.Parameters.Add("@QUEQUAN", SqlDbType.NVarChar, 255, "QUEQUAN");
+            //Icmd.Parameters.Add("@EMAIL", SqlDbType.NVarChar, 255, "EMAIL");
+            //Icmd.Parameters.Add("@SODT", SqlDbType.NVarChar, 20, "SODT");
+            //Icmd.Parameters.Add("@GIOITINH", SqlDbType.NVarChar, 10, "GIOITINH");
+            //Icmd.Parameters.Add("@MATOGV", SqlDbType.NVarChar, 10, "MATOGV");
+            //Icmd.Parameters.Add("@MONGD", SqlDbType.NVarChar, 30, "MONGD");
+            //_da.InsertCommand = Icmd;
 
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(_da);
+            SqlCommandBuilder commandBuilderTK = new SqlCommandBuilder(_daTk);
+            
+        }
         public DataSet GetDataSet()
         {
+            GetDataSet(_daTk, "tblLOGINTABLE");
             return GetDataSet(_da, "tblGIAOVIEN");
         }
 
@@ -46,31 +52,39 @@ namespace DAL
             string conditon = $"MAGV = '{giaoVien.MaGV}'";
             return CheckPrimary(dt, conditon);
         }
-        public int Insert(GiaoVien giaoVien)
+
+        public string Insert(GiaoVien giaoVien)
         {
             if (CheckPrimary(giaoVien) == false)
-                return 0;
+                return "Mã số đã tồn tại";
             
             DataRow row = DataSet.Tables["tblGIAOVIEN"].NewRow();
             row["MAGV"] = giaoVien.MaGV;
             row["HOTEN"] = giaoVien.TenGV;
             row["NGAYSINH"] = giaoVien.NgaySinh;
-            row["DIACHI"] = giaoVien.DiaChi;
+            row["QUEQUAN"] = giaoVien.QueQuan;
             row["EMAIL"] = giaoVien.Email;
             row["SODT"] = giaoVien.SoDT;
             row["GIOITINH"] = giaoVien.GioiTinh;            
-            row["MATOGV"] = null;
-            row["USERNAME"] = null;//giaoVien.Taikhoan;           
+            row["MATOGV"] = giaoVien.MaToGV;
+            row["USERNAME"] = giaoVien.Taikhoan;
             row["MONGD"] = giaoVien.MonGD;
-            
+
+            DataRow rowTK = DataSet.Tables["tblLOGINTABLE"].NewRow();
+            rowTK["USERNAME"] = giaoVien.Taikhoan;
+            rowTK["PASSWORD"] = giaoVien.Matkhau;
+            rowTK["QUYEN"] = "GV";
+            DataSet.Tables["tblLOGINTABLE"].Rows.Add(rowTK);
+
             DataSet.Tables["tblGIAOVIEN"].Rows.Add(row);
-            return 1;
+            return "Thành công";
         }
         public void Save()
         {
-            //_da.Update(DataSet, "tblGIAOVIEN");
+            Save(_daTk, "tblLOGINTABLE");
             Save(_da, "tblGIAOVIEN");          
         }
 
+        
     }
 }

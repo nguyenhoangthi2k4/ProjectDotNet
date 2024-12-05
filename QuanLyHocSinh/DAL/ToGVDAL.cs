@@ -16,6 +16,7 @@ namespace DAL
         {
             string strSQL = "SELECT * FROM TOGV";
             _da = new SqlDataAdapter(strSQL, Conn);
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(_da);
         }
 
         public DataSet GetDataSet()
@@ -28,17 +29,22 @@ namespace DAL
             string condition = $"MATOGV = '{toGV.MaToGV}'";
             return CheckPrimary(dt, condition);
         }
-        public int Insert(ToGV toGV)
+        public string Insert(ToGV toGV)
         {
             if (CheckPrimary(toGV) == false)
-                return 0;
+                return "Mã tổ Đã tồn tại";
 
             DataRow row = DataSet.Tables["tblTOGV"].NewRow();
             row["MATOGV"] = toGV.MaToGV;
             row["TRUONGTOGV"] = toGV.TruongToGV;
             row["TENTOGV"] = toGV.TenToGV;
             DataSet.Tables["tblTOGV"].Rows.Add(row);
-            return 1;
+            return "Thành công";
+        }
+
+        public void Save()
+        {
+            Save(_da, "tblTOGV");
         }
     }
 }

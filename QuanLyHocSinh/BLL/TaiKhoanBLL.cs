@@ -10,10 +10,9 @@ namespace BLL
 {
     public class TaiKhoanBLL
     {
-        TaiKhoanDAL taiKhoanDAL = new TaiKhoanDAL();    
-
-        public TaiKhoanBLL() 
-        { 
+        TaiKhoanDAL taiKhoanDAL = new TaiKhoanDAL();  
+        public TaiKhoanBLL()
+        {
         }
 
         public DataTable GetData()
@@ -31,6 +30,7 @@ namespace BLL
             taiKhoanDAL.Save();
         }
 
+       
         public string[] Login(TaiKhoan tk)
         {
             string[] taikhoan = new string[2];
@@ -48,7 +48,6 @@ namespace BLL
             }    
             return taikhoan;
         }
-
-      
+       
     }
 }

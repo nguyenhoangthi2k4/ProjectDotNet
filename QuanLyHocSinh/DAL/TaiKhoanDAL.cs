@@ -32,31 +32,24 @@ namespace DAL
         {
             return GetDataSet(_da, "tblLOGIN_TABLE");
         }
-
-        public bool CheckPrimary(TaiKhoan taiKhoan)
-        {
-            DataTable dt = DataSet.Tables["tblLOGIN_TABLE"];
-            string conditon = $"USERNAME = '{taiKhoan.Taikhoan}'";
-            return CheckPrimary(dt, conditon);
-        }
-
+       
         public int Insert(TaiKhoan tk)
         {
-            //if (CheckPrimary(tk) == false)
-            //    return 0;
-            if (!DataSet.Tables.Contains("tblLOGIN_TABLE"))
-                this.GetDataSet();
+            //if (!DataSet.Tables.Contains("tblLOGIN_TABLE"))
+            //    this.GetDataSet();
 
             DataRow row = DataSet.Tables["tblLOGIN_TABLE"].NewRow();
             row["USERNAME"] = tk.Taikhoan;
             row["PASSWORD"] = tk.Matkhau;
             row["QUYEN"] = tk.Quyen;            
             DataSet.Tables["tblLOGIN_TABLE"].Rows.Add(row);
+
             return 1;
         }
 
         public void Save()
         {
+            //_da.Update(DataSet, "tblLOGIN_TABLE");
             Save(_da, "tblLOGIN_TABLE");
         }
            
@@ -92,5 +85,7 @@ namespace DAL
             }
             return user;  
         }
+
+        
     }
 }
