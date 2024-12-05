@@ -24,13 +24,16 @@ namespace DAL
             return GetDataSet(_da, "tblNAMHOC");
         }
 
-        public DataSet Insert(NamHoc namHoc)
+        public int Insert(NamHoc namHoc)
         {
+            if (this.CheckPrimary(namHoc)==false)
+                return 0;
+
             DataRow row = DataSet.Tables["tblNAMHOC"].NewRow();
-            row["MaNH"] = namHoc.MaNH;
-            row["MaHK"] = namHoc.MaHK;
+            row["MANH"] = namHoc.MaNH;
+            row["MAHK"] = namHoc.MaHK;
             DataSet.Tables["tblNAMHOC"].Rows.Add(row);
-            return DataSet;
+            return 1;
         }
         
         public bool CheckPrimary(NamHoc namHoc)
@@ -40,10 +43,9 @@ namespace DAL
             return CheckPrimary(dt, condition); 
         }
 
-        public DataSet Save()
+        public void Save()
         {
-            _da.Update(DataSet, "tblNAMHOC");
-            return DataSet;
+            _da.Update(DataSet, "tblNAMHOC");            
         }
     }
 }

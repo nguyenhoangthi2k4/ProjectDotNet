@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,25 @@ namespace BLL
     public class TaiKhoanBLL
     {
         TaiKhoanDAL taiKhoanDAL = new TaiKhoanDAL();    
+
+        public TaiKhoanBLL() 
+        { 
+        }
+
+        public DataTable GetData()
+        {
+            return taiKhoanDAL.GetDataSet().Tables["tblLOGIN_TABLE"];
+        }
+
+        public int Insert(TaiKhoan tk)
+        {
+            return taiKhoanDAL.Insert(tk);
+        }
+
+        public void Save()
+        {
+            taiKhoanDAL.Save();
+        }
 
         public string[] Login(TaiKhoan tk)
         {
@@ -28,5 +48,7 @@ namespace BLL
             }    
             return taikhoan;
         }
+
+      
     }
 }

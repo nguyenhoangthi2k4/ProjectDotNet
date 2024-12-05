@@ -95,6 +95,7 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(321, 91);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.ReadOnly = true;
             this.txtMatKhau.Size = new System.Drawing.Size(150, 26);
             this.txtMatKhau.TabIndex = 20;
             // 
@@ -102,6 +103,7 @@
             // 
             this.txtTenDN.Location = new System.Drawing.Point(99, 91);
             this.txtTenDN.Name = "txtTenDN";
+            this.txtTenDN.ReadOnly = true;
             this.txtTenDN.Size = new System.Drawing.Size(139, 26);
             this.txtTenDN.TabIndex = 19;
             // 
@@ -174,6 +176,7 @@
             this.txtMaSo.Name = "txtMaSo";
             this.txtMaSo.Size = new System.Drawing.Size(139, 26);
             this.txtMaSo.TabIndex = 8;
+            this.txtMaSo.TextChanged += new System.EventHandler(this.txtMaSo_TextChanged);
             // 
             // lblGioiTinh
             // 
@@ -493,6 +496,9 @@
             // cbGioiTinh
             // 
             this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cbGioiTinh.Location = new System.Drawing.Point(544, 91);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(164, 28);

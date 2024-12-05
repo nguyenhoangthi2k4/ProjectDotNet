@@ -7,3 +7,12 @@ D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\DAL\obj\Debug\DAL.csproj.CoreCo
 D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\DAL\obj\Debug\DAL.dll
 D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\DAL\obj\Debug\DAL.pdb
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DAL\bin\Debug\DAL.dll
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DAL\bin\Debug\DAL.pdb
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DAL\bin\Debug\DTO.dll
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DAL\bin\Debug\DTO.pdb
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DAL\obj\Debug\DAL.dll
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DAL\obj\Debug\DAL.pdb

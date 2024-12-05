@@ -13,7 +13,6 @@ namespace DTO
 
         public GiaoVien():base()
         {
-            MaToGV = toGV.MaToGV; 
         }
 
         public string MaGV { get => _maGV; set => _maGV = value; }

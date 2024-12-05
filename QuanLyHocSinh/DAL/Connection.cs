@@ -25,7 +25,7 @@ namespace DAL
             _dataSet = new DataSet();            
         }
        
-
+        // Execute Stored Procedure
         public int ExecuteSQL(string procName, SqlParameter[] parameters)
         {
             int row = 0;
@@ -64,5 +64,30 @@ namespace DAL
             return rows.Length < 1 ? true : false; // Không tồn tại giá trị
         }
 
+        public void Save(SqlDataAdapter dataAdapter, string tblName)
+        {
+            dataAdapter.Update(DataSet, tblName);
+            //SqlTransaction Transaction = null;
+            //try
+            //{
+            //    Conn.Open();
+            //    Transaction = Conn.BeginTransaction();
+
+            //    // Thiết lập Transaction cho SqlDataAdapter
+            //    dataAdapter.SelectCommand.Transaction = Transaction;
+            //    // Cập nhật vào Database
+            //    dataAdapter.Update(DataSet, tblName);
+            //    Transaction.Commit();
+            //}
+            //catch (Exception ex)
+            //{
+
+            //}
+            //finally
+            //{
+            //    if(Conn.State == ConnectionState.Open)
+            //        Conn.Close();
+            //}
+        }
     }
 }

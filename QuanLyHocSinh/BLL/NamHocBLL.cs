@@ -17,21 +17,14 @@ namespace BLL
             return namHocDAL.GetDataSet().Tables["tblNAMHOC"];
         }
 
-        //public bool CheckMaNH_MaHK(NamHoc namHoc)
-        //{
-        //   return namHocDAL.CheckPrimary(namHoc);
-        //}
-
-        public DataSet Insert(NamHoc namHoc)
+        public int Insert(NamHoc namHoc)
         {
-            if(namHocDAL.CheckPrimary(namHoc))
-                return namHocDAL.Insert(namHoc);
-            return null;
+           return namHocDAL.Insert(namHoc);
         }
 
-        public DataSet Save()
+        public void Save()
         {
-            return namHocDAL.Save();
+            namHocDAL.Save();
         }
     }
 }

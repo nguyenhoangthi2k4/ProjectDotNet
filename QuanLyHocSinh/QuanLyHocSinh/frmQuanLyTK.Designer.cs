@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.pnQLTK = new System.Windows.Forms.Panel();
-            this.lblQLTK = new System.Windows.Forms.Label();
-            this.grbTTCT = new System.Windows.Forms.GroupBox();
-            this.lblMaSo = new System.Windows.Forms.Label();
-            this.lblMatKhau = new System.Windows.Forms.Label();
-            this.lblQuyen = new System.Windows.Forms.Label();
-            this.txtMaSo = new System.Windows.Forms.TextBox();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.lblTenDN = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.grbTTCT = new System.Windows.Forms.GroupBox();
             this.cbQuyen = new System.Windows.Forms.ComboBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtMaSo = new System.Windows.Forms.TextBox();
+            this.lblQuyen = new System.Windows.Forms.Label();
+            this.lblTenDN = new System.Windows.Forms.Label();
+            this.lblMatKhau = new System.Windows.Forms.Label();
+            this.lblMaSo = new System.Windows.Forms.Label();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.lblQLTK = new System.Windows.Forms.Label();
             this.pnQLTK.SuspendLayout();
-            this.grbTTCT.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
+            this.grbTTCT.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnQLTK
@@ -64,15 +64,48 @@
             this.pnQLTK.Size = new System.Drawing.Size(1475, 600);
             this.pnQLTK.TabIndex = 0;
             // 
-            // lblQLTK
+            // groupBox2
             // 
-            this.lblQLTK.AutoSize = true;
-            this.lblQLTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQLTK.Location = new System.Drawing.Point(21, 28);
-            this.lblQLTK.Name = "lblQLTK";
-            this.lblQLTK.Size = new System.Drawing.Size(394, 40);
-            this.lblQLTK.TabIndex = 0;
-            this.lblQLTK.Text = "QUẢN LÝ TÀI KHOẢN";
+            this.groupBox2.Controls.Add(this.dgvDanhSach);
+            this.groupBox2.Location = new System.Drawing.Point(419, 84);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1044, 504);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách";
+            // 
+            // dgvDanhSach
+            // 
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSach.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDanhSach.Location = new System.Drawing.Point(3, 22);
+            this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.RowHeadersWidth = 62;
+            this.dgvDanhSach.RowTemplate.Height = 28;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDanhSach.Size = new System.Drawing.Size(1038, 479);
+            this.dgvDanhSach.TabIndex = 0;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(288, 423);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(104, 45);
+            this.btnLuu.TabIndex = 5;
+            this.btnLuu.TabStop = false;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(155, 423);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(104, 45);
+            this.btnHuy.TabIndex = 5;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // grbTTCT
             // 
@@ -91,23 +124,34 @@
             this.grbTTCT.TabStop = false;
             this.grbTTCT.Text = "Thông tin";
             // 
-            // lblMaSo
+            // cbQuyen
             // 
-            this.lblMaSo.AutoSize = true;
-            this.lblMaSo.Location = new System.Drawing.Point(17, 75);
-            this.lblMaSo.Name = "lblMaSo";
-            this.lblMaSo.Size = new System.Drawing.Size(56, 20);
-            this.lblMaSo.TabIndex = 1;
-            this.lblMaSo.Text = "Mã số:";
+            this.cbQuyen.FormattingEnabled = true;
+            this.cbQuyen.Location = new System.Drawing.Point(146, 210);
+            this.cbQuyen.Name = "cbQuyen";
+            this.cbQuyen.Size = new System.Drawing.Size(200, 28);
+            this.cbQuyen.TabIndex = 5;
             // 
-            // lblMatKhau
+            // txtMatKhau
             // 
-            this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Location = new System.Drawing.Point(17, 167);
-            this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(79, 20);
-            this.lblMatKhau.TabIndex = 2;
-            this.lblMatKhau.Text = "Mật khẩu:";
+            this.txtMatKhau.Location = new System.Drawing.Point(146, 167);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(200, 26);
+            this.txtMatKhau.TabIndex = 4;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(146, 118);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(200, 26);
+            this.textBox4.TabIndex = 4;
+            // 
+            // txtMaSo
+            // 
+            this.txtMaSo.Location = new System.Drawing.Point(146, 72);
+            this.txtMaSo.Name = "txtMaSo";
+            this.txtMaSo.Size = new System.Drawing.Size(200, 26);
+            this.txtMaSo.TabIndex = 4;
             // 
             // lblQuyen
             // 
@@ -118,20 +162,6 @@
             this.lblQuyen.TabIndex = 3;
             this.lblQuyen.Text = "Quyền:";
             // 
-            // txtMaSo
-            // 
-            this.txtMaSo.Location = new System.Drawing.Point(146, 72);
-            this.txtMaSo.Name = "txtMaSo";
-            this.txtMaSo.Size = new System.Drawing.Size(200, 26);
-            this.txtMaSo.TabIndex = 4;
-            // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.Location = new System.Drawing.Point(146, 167);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(200, 26);
-            this.txtMatKhau.TabIndex = 4;
-            // 
             // lblTenDN
             // 
             this.lblTenDN.AutoSize = true;
@@ -141,12 +171,23 @@
             this.lblTenDN.TabIndex = 1;
             this.lblTenDN.Text = "Tên Đăng nhập:";
             // 
-            // textBox4
+            // lblMatKhau
             // 
-            this.textBox4.Location = new System.Drawing.Point(146, 118);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 26);
-            this.textBox4.TabIndex = 4;
+            this.lblMatKhau.AutoSize = true;
+            this.lblMatKhau.Location = new System.Drawing.Point(17, 167);
+            this.lblMatKhau.Name = "lblMatKhau";
+            this.lblMatKhau.Size = new System.Drawing.Size(79, 20);
+            this.lblMatKhau.TabIndex = 2;
+            this.lblMatKhau.Text = "Mật khẩu:";
+            // 
+            // lblMaSo
+            // 
+            this.lblMaSo.AutoSize = true;
+            this.lblMaSo.Location = new System.Drawing.Point(17, 75);
+            this.lblMaSo.Name = "lblMaSo";
+            this.lblMaSo.Size = new System.Drawing.Size(56, 20);
+            this.lblMaSo.TabIndex = 1;
+            this.lblMaSo.Text = "Mã số:";
             // 
             // btnSua
             // 
@@ -157,53 +198,15 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // btnHuy
+            // lblQLTK
             // 
-            this.btnHuy.Location = new System.Drawing.Point(155, 423);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(104, 45);
-            this.btnHuy.TabIndex = 5;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(288, 423);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(104, 45);
-            this.btnLuu.TabIndex = 5;
-            this.btnLuu.TabStop = false;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dgvDanhSach);
-            this.groupBox2.Location = new System.Drawing.Point(419, 84);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1044, 504);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh sách";
-            // 
-            // dgvDanhSach
-            // 
-            this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDanhSach.Location = new System.Drawing.Point(3, 22);
-            this.dgvDanhSach.Name = "dgvDanhSach";
-            this.dgvDanhSach.RowHeadersWidth = 62;
-            this.dgvDanhSach.RowTemplate.Height = 28;
-            this.dgvDanhSach.Size = new System.Drawing.Size(1038, 479);
-            this.dgvDanhSach.TabIndex = 0;
-            // 
-            // cbQuyen
-            // 
-            this.cbQuyen.FormattingEnabled = true;
-            this.cbQuyen.Location = new System.Drawing.Point(146, 210);
-            this.cbQuyen.Name = "cbQuyen";
-            this.cbQuyen.Size = new System.Drawing.Size(200, 28);
-            this.cbQuyen.TabIndex = 5;
+            this.lblQLTK.AutoSize = true;
+            this.lblQLTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQLTK.Location = new System.Drawing.Point(21, 28);
+            this.lblQLTK.Name = "lblQLTK";
+            this.lblQLTK.Size = new System.Drawing.Size(394, 40);
+            this.lblQLTK.TabIndex = 0;
+            this.lblQLTK.Text = "QUẢN LÝ TÀI KHOẢN";
             // 
             // frmQuanLyTK
             // 
@@ -216,10 +219,10 @@
             this.Text = "frmQuanLyTaiKhoan";
             this.pnQLTK.ResumeLayout(false);
             this.pnQLTK.PerformLayout();
-            this.grbTTCT.ResumeLayout(false);
-            this.grbTTCT.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
+            this.grbTTCT.ResumeLayout(false);
+            this.grbTTCT.PerformLayout();
             this.ResumeLayout(false);
 
         }

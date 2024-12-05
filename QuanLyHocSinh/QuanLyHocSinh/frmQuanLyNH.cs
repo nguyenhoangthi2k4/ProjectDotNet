@@ -36,17 +36,20 @@ namespace QuanLyHocSinh
 
         private void btnThemNH_Click(object sender, EventArgs e)
         {
-            NamHoc namHoc = new NamHoc();           
+            NamHoc namHoc = new NamHoc();     
+            TaiKhoan taiKhoan = new TaiKhoan();
             
             if (this.txtNamHoc.Text != " " && this.txtNamHoc.Text.Length == 5)
             {
                 namHoc.MaNH = this.txtNamHoc.Text.ToUpper();
                 namHoc.MaHK = this.cbHocKy.SelectedItem.ToString();
-                if (namHocBLL.Insert(namHoc) == null)
+                if (namHocBLL.Insert(namHoc) == 0)
                     MessageBox.Show("Mã năm học và học kỳ đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    namHocBLL.Insert(namHoc);
+                    int row = namHocBLL.Insert(namHoc);
+                    if (row > 0)
+                        MessageBox.Show("Nhập thêm thành công", "Thông báo", MessageBoxButtons.OK);                   
                 }                   
                 this.txtNamHoc.Text = string.Empty;
                 this.cbHocKy.SelectedIndex = -1;

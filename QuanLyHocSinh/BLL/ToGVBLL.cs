@@ -19,5 +19,10 @@ namespace BLL
         {
             return ToGVDAL.GetDataSet().Tables["tblTOGV"];
         }
+
+        public int Insert(ToGV toGV)
+        {
+            return ToGVDAL.Insert(toGV);
+        }
     }
 }

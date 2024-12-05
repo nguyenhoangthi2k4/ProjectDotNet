@@ -14,12 +14,13 @@ namespace QuanLyHocSinh
 {
     public partial class frmLogin : Form
     {
-        TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
         TaiKhoan taiKhoan = new TaiKhoan();
-        
+        TaiKhoanBLL taiKhoanBLL = new TaiKhoanBLL();
         public frmLogin()
         {
             InitializeComponent();
+            this.txtUsername.Text = "admin";
+            this.txtPassword.Text = "admin";
         }
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -36,7 +37,7 @@ namespace QuanLyHocSinh
             
             if (DangNhap[0] != "Tài khoản không hợp lệ")
             {
-                if (taiKhoanBLL.Login(taiKhoan)[1] == "ADMIN")
+                if (taiKhoanBLL.Login(taiKhoan)[1] == "AD")
                 {
                     this.Hide();
                     frmAdmin frmAdmin = new frmAdmin();

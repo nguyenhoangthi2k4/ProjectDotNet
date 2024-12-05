@@ -4,3 +4,9 @@ D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\DTO\obj\Debug\DTO.csproj.Assemb
 D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\DTO\obj\Debug\DTO.dll
 D:\2022 - 2026\HOC KI 5\C#\Project\QuanLyHocSinh\DTO\obj\Debug\DTO.pdb
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DTO\bin\Debug\DTO.dll
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DTO\bin\Debug\DTO.pdb
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DTO\obj\Debug\DTO.dll
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\DTO\obj\Debug\DTO.pdb

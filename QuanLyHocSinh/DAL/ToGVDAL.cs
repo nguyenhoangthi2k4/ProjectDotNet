@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -21,6 +22,23 @@ namespace DAL
         {
             return GetDataSet(_da, "tblTOGV");
         }
+        public bool CheckPrimary(ToGV toGV)
+        {
+            DataTable dt = DataSet.Tables["tblTOGV"];
+            string condition = $"MATOGV = '{toGV.MaToGV}'";
+            return CheckPrimary(dt, condition);
+        }
+        public int Insert(ToGV toGV)
+        {
+            if (CheckPrimary(toGV) == false)
+                return 0;
 
+            DataRow row = DataSet.Tables["tblTOGV"].NewRow();
+            row["MATOGV"] = toGV.MaToGV;
+            row["TRUONGTOGV"] = toGV.TruongToGV;
+            row["TENTOGV"] = toGV.TenToGV;
+            DataSet.Tables["tblTOGV"].Rows.Add(row);
+            return 1;
+        }
     }
 }
