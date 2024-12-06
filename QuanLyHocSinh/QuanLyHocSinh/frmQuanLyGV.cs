@@ -42,6 +42,7 @@ namespace QuanLyHocSinh
             this.dgvDanhSachToGV.Columns["MaToGv"].HeaderText = "Mã tổ";
             this.dgvDanhSachToGV.Columns["TenToGv"].HeaderText = "Tên tổ";
             this.dgvDanhSachToGV.Columns["TruongToGV"].HeaderText = "Trưởng tổ";
+            this.dgvDanhSachToGV.ClearSelection();
 
             // dgvDanhSach
             this.dgvDanhSach.DataSource = dtGV;
@@ -54,36 +55,35 @@ namespace QuanLyHocSinh
             this.dgvDanhSach.Columns["MONGD"].HeaderText = "Môn GD";
             this.dgvDanhSach.Columns["MATOGV"].HeaderText = "Mã tổ";
             this.dgvDanhSach.Columns["USERNAME"].HeaderText = "Tên ĐN";
+            this.dgvDanhSach.ClearSelection();
 
-            this.cbGioiTinh.SelectedIndex = 0;
-
+            this.cbGioiTinh.SelectedIndex = -1; 
         }
         public void InsertGV()
         {
-            GiaoVien gv = new GiaoVien();               
-           
+            GiaoVien gv = new GiaoVien(); 
             gv.MaGV = this.txtMaSo.Text.ToUpper();
             gv.TenGV = this.txtHoTen.Text;
             gv.QueQuan = this.txtQueQuan.Text;
             gv.SoDT = this.txtSoDT.Text;
-            gv.MaToGV = this.cbToGV.SelectedValue.ToString();
+            gv.MaToGV = this.cbToGV.SelectedValue?.ToString();
             gv.NgaySinh = this.dtpNgaySinh.Value.ToShortDateString();
-            gv.GioiTinh = this.cbGioiTinh.SelectedItem.ToString();           
+            gv.GioiTinh = this.cbGioiTinh.SelectedItem?.ToString();           
             gv.Email = this.txtEmail.Text;
             gv.MonGD = this.txtMonGD.Text;
 
             gv.Taikhoan = gv.MaGV;
             gv.Matkhau = gv.MaGV.ToLower();
-
-            string resultGV = giaoVienBLL.Insert(gv);
-            MessageBox.Show(resultGV, "Thông báo");
+            
+            string resultGV = giaoVienBLL.Insert(gv); // Insert GiaoVien
+            MessageBox.Show(resultGV, "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.txtMaSo.Text = string.Empty;
             this.txtHoTen.Text = string.Empty;
             this.txtQueQuan.Text = string.Empty;
             this.txtSoDT.Text = string.Empty;
             this.cbToGV.SelectedIndex = -1;
-            this.cbGioiTinh.SelectedIndex = 0;
+            this.cbGioiTinh.SelectedIndex = -1;
             this.txtEmail.Text = string.Empty;
             this.txtMonGD.Text = string.Empty;        
         }
@@ -93,13 +93,14 @@ namespace QuanLyHocSinh
             ToGV toGV = new ToGV();
             toGV.MaToGV = this.txtMaToGV.Text.ToUpper();
             toGV.TenToGV = this.txtTenTo.Text;
-            toGV.TruongToGV = this.cbTruongTo.SelectedValue.ToString();
+            toGV.TruongToGV = this.cbTruongTo.SelectedValue?.ToString();
 
-            string resultToGV = toGVBLL.Insert(toGV);
-            MessageBox.Show(resultToGV, "Thông báo");
+            string resultToGV = toGVBLL.Insert(toGV); // Insert ToGV
+            MessageBox.Show(resultToGV, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
            
             this.txtMaToGV.Text = string.Empty;
-            this.txtTenTo.Text = string.Empty;    
+            this.txtTenTo.Text = string.Empty;
+            this.cbTruongTo.SelectedIndex = -1;
         }
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
@@ -115,15 +116,63 @@ namespace QuanLyHocSinh
             }               
         }
 
+        public void Update_GV()
+        {
+            GiaoVien gv = new GiaoVien();
+            gv.MaGV = this.txtMaSo.Text;
+            gv.TenGV = this.txtHoTen.Text;
+            gv.QueQuan = this.txtQueQuan.Text;
+            gv.SoDT = this.txtSoDT.Text;
+            gv.MaToGV = this.cbToGV.SelectedValue?.ToString();
+            gv.NgaySinh = this.dtpNgaySinh.Value.ToShortDateString();
+            gv.GioiTinh = this.cbGioiTinh.SelectedItem?.ToString();
+            gv.Email = this.txtEmail.Text;
+            gv.MonGD = this.txtMonGD.Text;
+            gv.Taikhoan = gv.MaGV;
+
+            string resultUpadte = giaoVienBLL.Update(gv);
+            MessageBox.Show(resultUpadte, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);            
+        }
+        public void Update_ToGV()
+        {
+            ToGV toGV = new ToGV();
+            toGV.MaToGV = this.txtMaToGV.Text;
+            toGV.TenToGV = this.txtTenTo.Text;
+            toGV.TruongToGV = this.cbTruongTo.SelectedValue?.ToString();
+
+            string resultUpadte = toGVBLL.Update(toGV);
+            MessageBox.Show(resultUpadte, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);            
+        }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
-        }
-      
+            if(this.dgvDanhSachToGV.SelectedRows.Count > 0)            
+                this.Update_ToGV();
+            //if (this.dgvDanhSach.SelectedRows.Count > 0)
+            //    this.Update_GV();
+        }      
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
            
+        }
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            giaoVienBLL.Destroy();
+            this.dgvDanhSach = new DataGridView();
+            this.dgvDanhSach.DataSource = dtGV;
+
+            this.dgvDanhSachToGV = new DataGridView();
+            this.dgvDanhSachToGV.DataSource = dtToGV;
+            toGVBLL.Destroy();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("Bạn có muốn lưu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                giaoVienBLL.Save();
+                toGVBLL.Save();
+            }
         }
 
         private void txtMaToGV_TextChanged(object sender, EventArgs e)
@@ -151,9 +200,8 @@ namespace QuanLyHocSinh
                 this.txtTenTo.Text = row.Cells["TENTOGV"].Value.ToString();
 
                 DataRow[] findrow = dtGV.Select($"MAGV = '{row.Cells["TRUONGTOGV"].Value.ToString()}'");
-                if (findrow.Length > 0)                    
+                if (findrow.Length > 0)
                     this.cbTruongTo.SelectedValue = findrow[0]["MAGV"];
- 
             }
         }
 
@@ -179,17 +227,8 @@ namespace QuanLyHocSinh
                 DataRow[] findrow = dtToGV.Select($"MATOGV = '{row.Cells["MATOGV"].Value.ToString()}'");
                 if (findrow.Length >0)
                     this.cbToGV.SelectedValue = findrow[0]["MATOGV"];
-            }
+                this.dgvDanhSach.ClearSelection();
+            }            
         }
-
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            if (DialogResult.Yes == MessageBox.Show("Bạn có muốn lưu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-            {
-                giaoVienBLL.Save();
-                toGVBLL.Save();
-            }                          
-        }
-
     }
 }

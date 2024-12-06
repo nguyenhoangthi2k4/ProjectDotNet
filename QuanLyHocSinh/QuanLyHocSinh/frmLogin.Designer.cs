@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.DangNhap = new System.Windows.Forms.ToolTip(this.components);
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblTenCT = new System.Windows.Forms.Label();
             this.pnLogin = new System.Windows.Forms.Panel();
@@ -48,7 +48,7 @@
             this.btnLogin.Size = new System.Drawing.Size(128, 37);
             this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "Đăng nhập";
-            this.toolTip1.SetToolTip(this.btnLogin, "Đăng nhập hệ thống");
+            this.DangNhap.SetToolTip(this.btnLogin, "Đăng nhập hệ thống");
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -142,7 +142,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip DangNhap;
         private System.Windows.Forms.Label lblTenCT;
         private System.Windows.Forms.Panel pnLogin;
         private System.Windows.Forms.TextBox txtPassword;

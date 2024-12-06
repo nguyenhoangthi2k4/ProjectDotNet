@@ -18,15 +18,25 @@ namespace BLL
         }
         public bool CheckInput(GiaoVien giaoVien)
         {
-            if (giaoVien.MaGV == "" || giaoVien.MaGV.Length != 5 || giaoVien.TenGV == "" || giaoVien.SoDT == "" || giaoVien.SoDT.Length != 10 || giaoVien.MonGD == "" || giaoVien.Email == "" || giaoVien.QueQuan == "")
+            if (giaoVien.MaGV == "" || giaoVien.MaGV.Length != 5 || giaoVien.TenGV == "" || giaoVien.SoDT == "" || giaoVien.SoDT.Length != 10 || giaoVien.MonGD == "" || giaoVien.Email == "" || giaoVien.QueQuan == "" || giaoVien.GioiTinh == null)
                 return false;
             return true;
         }
         public string Insert(GiaoVien giaoVien)
         {
             if(this.CheckInput(giaoVien) == false)
-                return "Nhập thông tin không chính xác";
+                return "Nhập thông tin Giáo viên không hợp lệ";
             return giaoVienDAL.Insert(giaoVien); 
+        }
+
+        public string Update(GiaoVien giaoVien)
+        {
+            return giaoVienDAL.Update(giaoVien);
+        }
+
+        public void Destroy()
+        {
+            giaoVienDAL.Destroy();
         }
 
         public void Save()

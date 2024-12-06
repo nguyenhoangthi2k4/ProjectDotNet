@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnLuu = new System.Windows.Forms.Button();
             this.cbToGV = new System.Windows.Forms.ComboBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -66,6 +67,9 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.toolTipMaTo = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipMaGV = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipSoDT = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnCha.SuspendLayout();
@@ -124,6 +128,7 @@
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(139, 26);
             this.txtSoDT.TabIndex = 11;
+            this.toolTipSoDT.SetToolTip(this.txtSoDT, "Số điện thoại phải đủ 10 số");
             // 
             // txtMonGD
             // 
@@ -138,6 +143,7 @@
             this.txtMaSo.Name = "txtMaSo";
             this.txtMaSo.Size = new System.Drawing.Size(139, 26);
             this.txtMaSo.TabIndex = 8;
+            this.toolTipMaGV.SetToolTip(this.txtMaSo, "Mã Giao viên phải có 5 kí tự");
             this.txtMaSo.TextChanged += new System.EventHandler(this.txtMaSo_TextChanged);
             // 
             // lblGioiTinh
@@ -255,6 +261,7 @@
             this.btnHuy.TabIndex = 3;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThemMoi
             // 
@@ -385,6 +392,7 @@
             this.txtMaToGV.Name = "txtMaToGV";
             this.txtMaToGV.Size = new System.Drawing.Size(184, 26);
             this.txtMaToGV.TabIndex = 8;
+            this.toolTipMaTo.SetToolTip(this.txtMaToGV, "Mã tổ phải đủ 5 kí tự");
             this.txtMaToGV.TextChanged += new System.EventHandler(this.txtMaToGV_TextChanged);
             // 
             // panel3
@@ -529,5 +537,8 @@
         private System.Windows.Forms.Label lblDanhSachGV;
         private System.Windows.Forms.TextBox txtQueQuan;
         private System.Windows.Forms.Label lblQueQuan;
+        private System.Windows.Forms.ToolTip toolTipMaTo;
+        private System.Windows.Forms.ToolTip toolTipSoDT;
+        private System.Windows.Forms.ToolTip toolTipMaGV;
     }
 }

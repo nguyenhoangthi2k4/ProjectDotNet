@@ -85,7 +85,5 @@ namespace DAL
             }
             return user;  
         }
-
-        
     }
 }

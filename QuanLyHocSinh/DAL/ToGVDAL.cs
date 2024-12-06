@@ -42,6 +42,21 @@ namespace DAL
             return "Thành công";
         }
 
+        public string Update(ToGV toGV)
+        {
+            DataRow row = DataSet.Tables["tblTOGV"].Select($"MATOGV = '{toGV.MaToGV}'")[0];
+            row["MATOGV"] = toGV.MaToGV;
+            row["TRUONGTOGV"] = toGV.TruongToGV;
+            row["TENTOGV"] = toGV.TenToGV;
+
+            return "Sửa Thành công";
+        }
+
+        public void Destroy()
+        {
+            DataSet.Tables["tblTOGV"].RejectChanges();
+        }
+
         public void Save()
         {
             Save(_da, "tblTOGV");

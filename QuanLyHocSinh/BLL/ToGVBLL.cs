@@ -29,8 +29,18 @@ namespace BLL
         public string Insert(ToGV toGV)
         {
             if (this.CheckInput(toGV) == false)
-                return "Nhập thông tin không chính xác";
+                return "Nhập thông tin Tổ Giáo viên không chính xác";
             return ToGVDAL.Insert(toGV);
+        }
+
+        public string Update(ToGV toGV)
+        {
+            return ToGVDAL.Update(toGV);
+        }
+
+        public void Destroy()
+        {
+            ToGVDAL?.Destroy();
         }
 
         public void Save()

@@ -26,19 +26,18 @@ namespace DAL
         }
        
         // Execute Stored Procedure
-        public int ExecuteSQL(string procName, SqlParameter[] parameters)
+        public DataTable SelectQuery(string procName, SqlParameter[] para)
         {
-            int row = 0;
+            DataTable dt = new DataTable();
             try
             {
-                using (SqlCommand cmd = new SqlCommand(procName, Conn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    if (parameters != null)
-                        cmd.Parameters.AddRange(parameters);
-                    Conn.Open();
-                    row = cmd.ExecuteNonQuery();
-                }
+                SqlCommand cmd = new SqlCommand(procName, Conn);
+                if(para != null)
+                    cmd.Parameters.AddRange(para);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+                Conn.Open();
+                sqlDataAdapter.Fill(dt);
             }
             catch (Exception ex)
             {
@@ -46,11 +45,12 @@ namespace DAL
             }
             finally
             {
-                if(Conn.State == ConnectionState.Open)
-                    Conn.Close();   
+                if (Conn.State == ConnectionState.Open)
+                    Conn.Close();
             }
-            return row;
+            return dt;
         }
+
 
         public DataSet GetDataSet(SqlDataAdapter adapter, string tblName)
         {
@@ -66,28 +66,7 @@ namespace DAL
 
         public void Save(SqlDataAdapter dataAdapter, string tblName)
         {
-            dataAdapter.Update(DataSet, tblName);
-            //SqlTransaction Transaction = null;
-            //try
-            //{
-            //    Conn.Open();
-            //    Transaction = Conn.BeginTransaction();
-
-            //    // Thiết lập Transaction cho SqlDataAdapter
-            //    dataAdapter.SelectCommand.Transaction = Transaction;
-            //    // Cập nhật vào Database
-            //    dataAdapter.Update(DataSet, tblName);
-            //    Transaction.Commit();
-            //}
-            //catch (Exception ex)
-            //{
-
-            //}
-            //finally
-            //{
-            //    if(Conn.State == ConnectionState.Open)
-            //        Conn.Close();
-            //}
+            dataAdapter.Update(DataSet, tblName);           
         }
     }
 }

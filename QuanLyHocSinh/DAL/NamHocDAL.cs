@@ -24,16 +24,21 @@ namespace DAL
             return GetDataSet(_da, "tblNAMHOC");
         }
 
-        public int Insert(NamHoc namHoc)
+        public DataTable GetDataMaNH()
+        {
+            return SelectQuery("sp_Select_NamHoc_ByMaHK", null);
+        }        
+
+        public string Insert(NamHoc namHoc)
         {
             if (this.CheckPrimary(namHoc)==false)
-                return 0;
+                return "Mã năm học và Học kỳ đã tồn tại";
 
             DataRow row = DataSet.Tables["tblNAMHOC"].NewRow();
             row["MANH"] = namHoc.MaNH;
             row["MAHK"] = namHoc.MaHK;
             DataSet.Tables["tblNAMHOC"].Rows.Add(row);
-            return 1;
+            return "Thành Công";
         }
         
         public bool CheckPrimary(NamHoc namHoc)
@@ -45,7 +50,7 @@ namespace DAL
 
         public void Save()
         {
-            _da.Update(DataSet, "tblNAMHOC");            
+            Save(_da, "tblNAMHOC");
         }
     }
 }

@@ -17,9 +17,21 @@ namespace BLL
             return namHocDAL.GetDataSet().Tables["tblNAMHOC"];
         }
 
-        public int Insert(NamHoc namHoc)
+        public DataTable GetDataMaNH()
         {
-           return namHocDAL.Insert(namHoc);
+            return namHocDAL.GetDataMaNH();
+        }
+        public bool CheckInput(NamHoc namHoc)
+        {
+            if(namHoc.MaNH == "" ||  namHoc.MaNH.Length != 5 || namHoc.MaHK == null)
+                return false;
+            return true;
+        }
+        public string Insert(NamHoc namHoc)
+        {
+            if (this.CheckInput(namHoc) == false)
+                return "Nhập thông tin Năm học không hợp lệ";
+            return namHocDAL.Insert(namHoc);
         }
 
         public void Save()

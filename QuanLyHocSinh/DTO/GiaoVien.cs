@@ -9,8 +9,7 @@ namespace DTO
     public class GiaoVien : TaiKhoan
     {
         private string _maGV, _tenGV, _ngaySinh, _soDT, _queQuan, _email, _gioiTinh, _monGD, _maToGV;
-        ToGV toGV = new ToGV();
-
+        
         public GiaoVien():base()
         {
         }

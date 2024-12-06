@@ -37,8 +37,7 @@ namespace DAL
             //_da.InsertCommand = Icmd;
 
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(_da);
-            SqlCommandBuilder commandBuilderTK = new SqlCommandBuilder(_daTk);
-            
+            SqlCommandBuilder commandBuilderTK = new SqlCommandBuilder(_daTk);            
         }
         public DataSet GetDataSet()
         {
@@ -79,12 +78,34 @@ namespace DAL
             DataSet.Tables["tblGIAOVIEN"].Rows.Add(row);
             return "Thành công";
         }
+
+        public string Update(GiaoVien giaoVien)
+        {
+            DataRow row = DataSet.Tables["tblGIAOVIEN"].Select($"MAGV = '{giaoVien.MaGV}'")[0];
+            row["HOTEN"] = giaoVien.TenGV;
+            row["NGAYSINH"] = giaoVien.NgaySinh;
+            row["QUEQUAN"] = giaoVien.QueQuan;
+            row["EMAIL"] = giaoVien.Email;
+            row["SODT"] = giaoVien.SoDT;
+            row["GIOITINH"] = giaoVien.GioiTinh;
+            row["MATOGV"] = giaoVien.MaToGV;
+            row["USERNAME"] = giaoVien.Taikhoan;
+            row["MONGD"] = giaoVien.MonGD;
+
+           // row.AcceptChanges();
+           // row.SetModified();
+            return "Sửa Thành công";
+        }
+
+        public void Destroy()
+        {
+            DataSet.Tables["tblGIAOVIEN"].RejectChanges();
+        }
+
         public void Save()
         {
             Save(_daTk, "tblLOGINTABLE");
             Save(_da, "tblGIAOVIEN");          
         }
-
-        
     }
 }
