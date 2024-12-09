@@ -49,7 +49,7 @@ namespace DAL
         {
             DataTable dt = DataSet.Tables["tblGIAOVIEN"];
             string conditon = $"MAGV = '{giaoVien.MaGV}'";
-            return CheckPrimary(dt, conditon);
+            return CheckCondition(dt, conditon);
         }
 
         public string Insert(GiaoVien giaoVien)
@@ -76,7 +76,7 @@ namespace DAL
             DataSet.Tables["tblLOGINTABLE"].Rows.Add(rowTK);
 
             DataSet.Tables["tblGIAOVIEN"].Rows.Add(row);
-            return "Thành công";
+            return "Thêm Thành công";
         }
 
         public string Update(GiaoVien giaoVien)
@@ -92,8 +92,6 @@ namespace DAL
             row["USERNAME"] = giaoVien.Taikhoan;
             row["MONGD"] = giaoVien.MonGD;
 
-           // row.AcceptChanges();
-           // row.SetModified();
             return "Sửa Thành công";
         }
 

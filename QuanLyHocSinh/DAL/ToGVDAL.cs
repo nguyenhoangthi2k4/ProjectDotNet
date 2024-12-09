@@ -27,7 +27,7 @@ namespace DAL
         {
             DataTable dt = DataSet.Tables["tblTOGV"];
             string condition = $"MATOGV = '{toGV.MaToGV}'";
-            return CheckPrimary(dt, condition);
+            return CheckCondition(dt, condition);
         }
         public string Insert(ToGV toGV)
         {

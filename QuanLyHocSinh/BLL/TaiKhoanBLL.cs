@@ -20,11 +20,6 @@ namespace BLL
             return taiKhoanDAL.GetDataSet().Tables["tblLOGIN_TABLE"];
         }
 
-        public int Insert(TaiKhoan tk)
-        {
-            return taiKhoanDAL.Insert(tk);
-        }
-
         public void Save()
         {
             taiKhoanDAL.Save();

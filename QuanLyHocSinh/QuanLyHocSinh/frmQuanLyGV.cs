@@ -42,20 +42,20 @@ namespace QuanLyHocSinh
             this.dgvDanhSachToGV.Columns["MaToGv"].HeaderText = "Mã tổ";
             this.dgvDanhSachToGV.Columns["TenToGv"].HeaderText = "Tên tổ";
             this.dgvDanhSachToGV.Columns["TruongToGV"].HeaderText = "Trưởng tổ";
-            this.dgvDanhSachToGV.ClearSelection();
+            
 
             // dgvDanhSach
             this.dgvDanhSach.DataSource = dtGV;
             this.dgvDanhSach.Columns["MAGV"].HeaderText = "Mã GV";
             this.dgvDanhSach.Columns["HOTEN"].HeaderText = "Họ tên";
             this.dgvDanhSach.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
-            this.dgvDanhSach.Columns["QUEQUAN"].HeaderText = "Địa chỉ";
+            this.dgvDanhSach.Columns["QUEQUAN"].HeaderText = "Quê quán";
             this.dgvDanhSach.Columns["SODT"].HeaderText = "Số ĐT";
             this.dgvDanhSach.Columns["GIOITINH"].HeaderText = "Giới tính";
             this.dgvDanhSach.Columns["MONGD"].HeaderText = "Môn GD";
             this.dgvDanhSach.Columns["MATOGV"].HeaderText = "Mã tổ";
             this.dgvDanhSach.Columns["USERNAME"].HeaderText = "Tên ĐN";
-            this.dgvDanhSach.ClearSelection();
+            
 
             this.cbGioiTinh.SelectedIndex = -1; 
         }
@@ -145,10 +145,10 @@ namespace QuanLyHocSinh
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(this.dgvDanhSachToGV.SelectedRows.Count > 0)            
-                this.Update_ToGV();
-            //if (this.dgvDanhSach.SelectedRows.Count > 0)
-            //    this.Update_GV();
+            //if(this.dgvDanhSachToGV.SelectedRows.Count > 0)            
+            //    this.Update_ToGV();
+            if (this.dgvDanhSach.SelectedRows.Count > 0)
+                this.Update_GV();
         }      
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -227,7 +227,7 @@ namespace QuanLyHocSinh
                 DataRow[] findrow = dtToGV.Select($"MATOGV = '{row.Cells["MATOGV"].Value.ToString()}'");
                 if (findrow.Length >0)
                     this.cbToGV.SelectedValue = findrow[0]["MATOGV"];
-                this.dgvDanhSach.ClearSelection();
+              
             }            
         }
     }

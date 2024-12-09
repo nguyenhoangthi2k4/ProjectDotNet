@@ -30,7 +30,7 @@ namespace BLL
         public string Insert(NamHoc namHoc)
         {
             if (this.CheckInput(namHoc) == false)
-                return "Nhập thông tin Năm học không hợp lệ";
+                return "Nhập thông tin không hợp lệ";
             return namHocDAL.Insert(namHoc);
         }
 

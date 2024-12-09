@@ -58,7 +58,7 @@ namespace DAL
             return DataSet;
         }
 
-        public bool CheckPrimary(DataTable table, string condition)
+        public bool CheckCondition(DataTable table, string condition)
         {
             DataRow[] rows = table.Select(condition);
             return rows.Length < 1 ? true : false; // Không tồn tại giá trị

@@ -38,14 +38,14 @@ namespace DAL
             row["MANH"] = namHoc.MaNH;
             row["MAHK"] = namHoc.MaHK;
             DataSet.Tables["tblNAMHOC"].Rows.Add(row);
-            return "Thành Công";
+            return "Thêm Thành Công";
         }
         
         public bool CheckPrimary(NamHoc namHoc)
         {
             DataTable dt = DataSet.Tables["tblNAMHOC"];
             string condition = $"MaNH = '{namHoc.MaNH}' AND MaHK = '{namHoc.MaHK}'";
-            return CheckPrimary(dt, condition); 
+            return CheckCondition(dt, condition); 
         }
 
         public void Save()

@@ -26,11 +26,15 @@ namespace BLL
         {
             if(this.CheckInput(giaoVien) == false)
                 return "Nhập thông tin Giáo viên không hợp lệ";
+
             return giaoVienDAL.Insert(giaoVien); 
         }
 
         public string Update(GiaoVien giaoVien)
         {
+            if (this.CheckInput(giaoVien) == false)
+                return "Nhập thông tin Giáo viên không hợp lệ";
+
             return giaoVienDAL.Update(giaoVien);
         }
 

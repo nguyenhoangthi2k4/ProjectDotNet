@@ -76,3 +76,4 @@ D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\QuanLyHocSinh\bin\Debug\D
 D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHo.CFAE9C16.Up2Date
 D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.exe
 D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.pdb
+D:\2022 - 2026\HOC KI 5\C#\ProjectDotNet\QuanLyHocSinh\QuanLyHocSinh\obj\Debug\QuanLyHocSinh.frmQuanLyLH.resources

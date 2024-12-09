@@ -33,6 +33,18 @@ namespace BLL
             return lopHocDAL.Insert(lopHoc);
         }
 
+        public string Update(LopHoc lopHoc)
+        {
+            if (this.CheckInput(lopHoc) == false)
+                return "Nhập thông tin Lớp học không hợp lệ";
+            return lopHocDAL.Update(lopHoc);
+        }
+
+        public void Destroy()
+        {
+            lopHocDAL.Destroy();
+        }
+
         public void Save()
         {
             lopHocDAL.Save();

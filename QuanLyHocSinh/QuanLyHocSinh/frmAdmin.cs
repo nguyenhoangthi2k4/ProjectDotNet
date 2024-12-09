@@ -65,5 +65,10 @@ namespace QuanLyHocSinh
         {
             this.SwitchFrom(new frmQuanLyTK());
         }
+
+        private void tsMnuItemQLLH_Click(object sender, EventArgs e)
+        {
+            this.SwitchFrom(new frmQuanLyLH());
+        }
     }
 }
