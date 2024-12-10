@@ -18,9 +18,10 @@ namespace DAL
         {
             string strSQL = "SELECT * FROM GIAOVIEN";
             string strSQLTK = "SELECT * FROM LOGIN_TABLE";
+
             _da = new SqlDataAdapter(strSQL, Conn);
             _daTk = new SqlDataAdapter(strSQLTK, Conn);
-            GiaoVien gv = new GiaoVien();
+            _daTk.Fill(DataSet, "tblLOGINTABLE");
 
             // InsertCommand
             //string ISQL = @"INSERT INTO GIAOVIEN(MAGV, HOTEN, NGAYSINH, QUEQUAN, EMAIL, SODT, GIOITINH, MATOGV, MONGD) VALUES (@MAGV, @HOTEN, @NGAYSINH, @QUEQUAN, @EMAIL, @SODT, @GIOITINH, @MATOGV, @MONGD)";
@@ -41,7 +42,7 @@ namespace DAL
         }
         public DataSet GetDataSet()
         {
-            GetDataSet(_daTk, "tblLOGINTABLE");
+            //GetDataSet(_daTk, "tblLOGINTABLE");
             return GetDataSet(_da, "tblGIAOVIEN");
         }
 

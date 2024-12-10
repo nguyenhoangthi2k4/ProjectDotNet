@@ -24,25 +24,13 @@ namespace QuanLyHocSinh
         {
             InitializeComponent();     
             dtGV = giaoVienBLL.GetData();
-            dtToGV = toGVBLL.GetData();
-            // cbToGV
-            this.cbTruongTo.DataSource = dtGV;
-            this.cbTruongTo.DisplayMember = "HOTEN";
-            this.cbTruongTo.ValueMember = "MAGV";
-            this.cbTruongTo.SelectedIndex = -1;
+            dtToGV = toGVBLL.GetData();            
 
             // cbToGV
             this.cbToGV.DataSource = dtToGV;
             this.cbToGV.DisplayMember = "TENTOGV";
             this.cbToGV.ValueMember = "MATOGV";
             this.cbToGV.SelectedIndex = -1;
-
-            // dgvDanhSachToGV
-            this.dgvDanhSachToGV.DataSource = dtToGV;
-            this.dgvDanhSachToGV.Columns["MaToGv"].HeaderText = "Mã tổ";
-            this.dgvDanhSachToGV.Columns["TenToGv"].HeaderText = "Tên tổ";
-            this.dgvDanhSachToGV.Columns["TruongToGV"].HeaderText = "Trưởng tổ";
-            
 
             // dgvDanhSach
             this.dgvDanhSach.DataSource = dtGV;
@@ -59,13 +47,40 @@ namespace QuanLyHocSinh
 
             this.cbGioiTinh.SelectedIndex = -1; 
         }
+        private void dgvDanhSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgvDanhSach.SelectedRows.Count > 0)
+            {
+                this.txtMaSo.ReadOnly = true;
+                this.txtMaSo.BackColor = Color.LightGray;
+
+                DataGridViewRow row = this.dgvDanhSach.SelectedRows[0];
+                this.txtMaSo.Text = row.Cells["MAGV"].Value.ToString();
+
+                this.txtHoTen.Text = row.Cells["HOTEN"].Value.ToString();
+                this.txtQueQuan.Text = row.Cells["QUEQUAN"].Value.ToString();
+                this.mtxtSoDT.Text = row.Cells["SODT"].Value.ToString();
+                this.txtEmail.Text = row.Cells["EMAIL"].Value.ToString();
+                this.txtMonGD.Text = row.Cells["MONGD"].Value.ToString();
+                this.dtpNgaySinh.Text = row.Cells["NGAYSINH"].Value.ToString();
+                if (row.Cells["GIOITINH"].Value.ToString() == "Nam")
+                    cbGioiTinh.SelectedIndex = 0;
+                else
+                    cbGioiTinh.SelectedIndex = 1;
+
+                DataRow[] findrow = dtToGV.Select($"MATOGV = '{row.Cells["MATOGV"].Value.ToString()}'");
+                if (findrow.Length > 0)
+                    this.cbToGV.SelectedValue = findrow[0]["MATOGV"];
+
+            }
+        }
         public void InsertGV()
         {
             GiaoVien gv = new GiaoVien(); 
             gv.MaGV = this.txtMaSo.Text.ToUpper();
             gv.TenGV = this.txtHoTen.Text;
             gv.QueQuan = this.txtQueQuan.Text;
-            gv.SoDT = this.txtSoDT.Text;
+            gv.SoDT = this.mtxtSoDT.Text;
             gv.MaToGV = this.cbToGV.SelectedValue?.ToString();
             gv.NgaySinh = this.dtpNgaySinh.Value.ToShortDateString();
             gv.GioiTinh = this.cbGioiTinh.SelectedItem?.ToString();           
@@ -81,39 +96,11 @@ namespace QuanLyHocSinh
             this.txtMaSo.Text = string.Empty;
             this.txtHoTen.Text = string.Empty;
             this.txtQueQuan.Text = string.Empty;
-            this.txtSoDT.Text = string.Empty;
+            this.mtxtSoDT.Text = string.Empty;
             this.cbToGV.SelectedIndex = -1;
             this.cbGioiTinh.SelectedIndex = -1;
             this.txtEmail.Text = string.Empty;
             this.txtMonGD.Text = string.Empty;        
-        }
-
-        public void InsertToGV()
-        {           
-            ToGV toGV = new ToGV();
-            toGV.MaToGV = this.txtMaToGV.Text.ToUpper();
-            toGV.TenToGV = this.txtTenTo.Text;
-            toGV.TruongToGV = this.cbTruongTo.SelectedValue?.ToString();
-
-            string resultToGV = toGVBLL.Insert(toGV); // Insert ToGV
-            MessageBox.Show(resultToGV, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-           
-            this.txtMaToGV.Text = string.Empty;
-            this.txtTenTo.Text = string.Empty;
-            this.cbTruongTo.SelectedIndex = -1;
-        }
-        private void btnThemMoi_Click(object sender, EventArgs e)
-        {
-            if(this.fGV)
-            {
-                this.InsertGV();
-                this.fGV = false;
-            }    
-            if(this.fToGV)
-            {
-                this.InsertToGV();
-                this.fToGV = false;
-            }               
         }
 
         public void Update_GV()
@@ -122,7 +109,7 @@ namespace QuanLyHocSinh
             gv.MaGV = this.txtMaSo.Text;
             gv.TenGV = this.txtHoTen.Text;
             gv.QueQuan = this.txtQueQuan.Text;
-            gv.SoDT = this.txtSoDT.Text;
+            gv.SoDT = this.mtxtSoDT.Text;
             gv.MaToGV = this.cbToGV.SelectedValue?.ToString();
             gv.NgaySinh = this.dtpNgaySinh.Value.ToShortDateString();
             gv.GioiTinh = this.cbGioiTinh.SelectedItem?.ToString();
@@ -133,37 +120,42 @@ namespace QuanLyHocSinh
             string resultUpadte = giaoVienBLL.Update(gv);
             MessageBox.Show(resultUpadte, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);            
         }
-        public void Update_ToGV()
+       
+        private void btnThemMoi_Click(object sender, EventArgs e)
         {
-            ToGV toGV = new ToGV();
-            toGV.MaToGV = this.txtMaToGV.Text;
-            toGV.TenToGV = this.txtTenTo.Text;
-            toGV.TruongToGV = this.cbTruongTo.SelectedValue?.ToString();
-
-            string resultUpadte = toGVBLL.Update(toGV);
-            MessageBox.Show(resultUpadte, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);            
+            this.InsertGV();
         }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
-            //if(this.dgvDanhSachToGV.SelectedRows.Count > 0)            
-            //    this.Update_ToGV();
             if (this.dgvDanhSach.SelectedRows.Count > 0)
+            {
                 this.Update_GV();
-        }      
+            }  
+        }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-           
+
         }
+
         private void btnHuy_Click(object sender, EventArgs e)
         {
             giaoVienBLL.Destroy();
-            this.dgvDanhSach = new DataGridView();
-            this.dgvDanhSach.DataSource = dtGV;
 
-            this.dgvDanhSachToGV = new DataGridView();
-            this.dgvDanhSachToGV.DataSource = dtToGV;
-            toGVBLL.Destroy();
+            this.dgvDanhSach.ClearSelection();
+            this.txtMaSo.ReadOnly = false;
+            this.txtMaSo.BackColor = Color.White;
+
+            this.txtMaSo.Focus();
+            this.txtMaSo.Text = string.Empty;
+            this.txtHoTen.Text = string.Empty;
+            this.txtQueQuan.Text = string.Empty;
+            this.mtxtSoDT.Text = string.Empty;
+            this.cbToGV.SelectedIndex = -1;
+            this.cbGioiTinh.SelectedIndex = -1;
+            this.txtEmail.Text = string.Empty;
+            this.txtMonGD.Text = string.Empty;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -171,64 +163,26 @@ namespace QuanLyHocSinh
             if (DialogResult.Yes == MessageBox.Show("Bạn có muốn lưu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 giaoVienBLL.Save();
-                toGVBLL.Save();
+                this.dgvDanhSach.ClearSelection();
+                this.txtMaSo.ReadOnly = false;
+                this.txtMaSo.BackColor = Color.White;
+
+                this.txtMaSo.Text = string.Empty;
+                this.txtHoTen.Text = string.Empty;
+                this.txtQueQuan.Text = string.Empty;
+                this.mtxtSoDT.Text = string.Empty;
+                this.cbToGV.SelectedIndex = -1;
+                this.cbGioiTinh.SelectedIndex = -1;
+                this.txtEmail.Text = string.Empty;
+                this.txtMonGD.Text = string.Empty;
             }
         }
 
-        private void txtMaToGV_TextChanged(object sender, EventArgs e)
+        private void frmQuanLyGV_Click(object sender, EventArgs e)
         {
-            if (this.txtMaToGV.Text != string.Empty)
-                fToGV = true;
-            else
-                fToGV = false;
-        }
-
-        private void txtMaSo_TextChanged(object sender, EventArgs e)
-        {
-            if(this.txtMaSo.Text != string.Empty)
-                fGV = true;
-            else
-                fGV = false;
-        }
-
-        private void dgvDanhSachToGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (this.dgvDanhSachToGV.SelectedRows.Count > 0)
-            {
-                DataGridViewRow row = this.dgvDanhSachToGV.SelectedRows[0];
-                this.txtMaToGV.Text = row.Cells["MATOGV"].Value.ToString();
-                this.txtTenTo.Text = row.Cells["TENTOGV"].Value.ToString();
-
-                DataRow[] findrow = dtGV.Select($"MAGV = '{row.Cells["TRUONGTOGV"].Value.ToString()}'");
-                if (findrow.Length > 0)
-                    this.cbTruongTo.SelectedValue = findrow[0]["MAGV"];
-            }
-        }
-
-        private void dgvDanhSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            if (this.dgvDanhSach.SelectedRows.Count > 0)
-            {
-                DataGridViewRow row = this.dgvDanhSach.SelectedRows[0];
-                this.txtMaSo.Text = row.Cells["MAGV"].Value.ToString();
-                
-                this.txtHoTen.Text = row.Cells["HOTEN"].Value.ToString();
-                this.txtQueQuan.Text = row.Cells["QUEQUAN"].Value.ToString();
-                this.txtSoDT.Text = row.Cells["SODT"].Value.ToString();
-                this.txtEmail.Text = row.Cells["EMAIL"].Value.ToString();
-                this.txtMonGD.Text = row.Cells["MONGD"].Value.ToString();
-                this.dtpNgaySinh.Text = row.Cells["NGAYSINH"].Value.ToString();
-                if (row.Cells["GIOITINH"].Value.ToString() == "Nam")
-                    cbGioiTinh.SelectedIndex = 0;
-                else
-                    cbGioiTinh.SelectedIndex = 1;
-
-                DataRow[] findrow = dtToGV.Select($"MATOGV = '{row.Cells["MATOGV"].Value.ToString()}'");
-                if (findrow.Length >0)
-                    this.cbToGV.SelectedValue = findrow[0]["MATOGV"];
-              
-            }            
+            this.dgvDanhSach.ClearSelection();
+            this.txtMaSo.ReadOnly = false;
+            this.txtMaSo.BackColor = Color.White;
         }
     }
 }

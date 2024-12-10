@@ -20,12 +20,41 @@ namespace BLL
             return taiKhoanDAL.GetDataSet().Tables["tblLOGIN_TABLE"];
         }
 
+        public bool CheckInput(TaiKhoan tk)
+        {
+            if(tk.Matkhau == "" || tk.Matkhau.Length >15)
+                return false;
+            return true;
+        }
+
+        public bool CheckQuyenADMIN(TaiKhoan tk)
+        {
+            if (tk.Quyen == "AD")
+                return false;
+            return true;
+        }
+
+        public string Update(TaiKhoan tk)
+        {
+            if (this.CheckQuyenADMIN(tk) == false)
+                return "Không thể sửa quyền ADMIN";
+
+            if (this.CheckInput(tk) == false)
+                return "Mật khẩu không hợp lệ";
+
+            return taiKhoanDAL.Update(tk);
+        }
+
+        public void Destroy()
+        {
+            taiKhoanDAL.Destroy();
+        }
+
         public void Save()
         {
             taiKhoanDAL.Save();
         }
 
-       
         public string[] Login(TaiKhoan tk)
         {
             string[] taikhoan = new string[2];

@@ -12,10 +12,12 @@ namespace BLL
     public class GiaoVienBLL
     {
         GiaoVienDAL giaoVienDAL = new GiaoVienDAL(); 
+
         public DataTable GetData()
         {
             return giaoVienDAL.GetDataSet().Tables["tblGIAOVIEN"];
         }
+
         public bool CheckInput(GiaoVien giaoVien)
         {
             if (giaoVien.MaGV == "" || giaoVien.MaGV.Length != 5 || giaoVien.TenGV == "" || giaoVien.SoDT == "" || giaoVien.SoDT.Length != 10 || giaoVien.MonGD == "" || giaoVien.Email == "" || giaoVien.QueQuan == "" || giaoVien.GioiTinh == null)

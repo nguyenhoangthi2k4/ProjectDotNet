@@ -87,12 +87,13 @@
             this.dgvDanhSachNH.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dgvDanhSachNH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachNH.Location = new System.Drawing.Point(35, 181);
+            this.dgvDanhSachNH.MultiSelect = false;
             this.dgvDanhSachNH.Name = "dgvDanhSachNH";
             this.dgvDanhSachNH.ReadOnly = true;
             this.dgvDanhSachNH.RowHeadersWidth = 62;
             this.dgvDanhSachNH.RowTemplate.Height = 28;
             this.dgvDanhSachNH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachNH.Size = new System.Drawing.Size(1193, 429);
+            this.dgvDanhSachNH.Size = new System.Drawing.Size(1195, 433);
             this.dgvDanhSachNH.TabIndex = 19;
             this.dgvDanhSachNH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachNH_CellContentClick);
             // 
@@ -151,6 +152,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQuanLyNH";
             this.Text = "frmQuanLyNH";
+            this.Click += new System.EventHandler(this.frmQuanLyNH_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachNH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

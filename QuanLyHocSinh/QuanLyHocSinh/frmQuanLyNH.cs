@@ -62,6 +62,7 @@ namespace QuanLyHocSinh
             if (DialogResult.Yes == MessageBox.Show("Bạn có muốn lưu?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
             {
                 namHocBLL.Save();
+                this.dgvDanhSachNH.ClearSelection();
             }
         }
 
@@ -80,6 +81,9 @@ namespace QuanLyHocSinh
         {
             if (this.dgvDanhSachNH.SelectedRows.Count > 0)
             {
+                this.txtNamHoc.ReadOnly = true;
+                this.txtNamHoc.BackColor = Color.LightGray;
+
                 DataGridViewRow row = this.dgvDanhSachNH.SelectedRows[0];
                 this.txtNamHoc.Text = row.Cells[0].Value.ToString();
                 if (row.Cells[1].Value.ToString() == "1")
@@ -87,6 +91,13 @@ namespace QuanLyHocSinh
                 else
                     this.cbHocKy.SelectedIndex = 1;
             }
+        }
+
+        private void frmQuanLyNH_Click(object sender, EventArgs e)
+        {
+            this.txtNamHoc.ReadOnly = false;
+            this.dgvDanhSachNH.ClearSelection();
+            this.txtNamHoc.BackColor = Color.White;
         }
     }
 }

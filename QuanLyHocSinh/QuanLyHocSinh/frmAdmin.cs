@@ -31,7 +31,7 @@ namespace QuanLyHocSinh
             // Thêm childForm vào pnContainer
             pnContainer.Controls.Clear();
             pnContainer.Controls.Add(childForm);
-
+            
             childForm.Show();
             this._currentForm = childForm;
         }
@@ -51,11 +51,6 @@ namespace QuanLyHocSinh
             this.SwitchFrom(new frmQuanLyHS());
         }
 
-        private void tsMnuItemQLGV_Click(object sender, EventArgs e)
-        {
-            this.SwitchFrom(new frmQuanLyGV());
-        }
-
         private void stMnuItemQLNH_Click(object sender, EventArgs e)
         {
             this.SwitchFrom(new frmQuanLyNH());
@@ -69,6 +64,16 @@ namespace QuanLyHocSinh
         private void tsMnuItemQLLH_Click(object sender, EventArgs e)
         {
             this.SwitchFrom(new frmQuanLyLH());
+        }
+
+        private void tsMnuItemToGV_Click(object sender, EventArgs e)
+        {
+            this.SwitchFrom(new frmQuanLyToGV());
+        }
+
+        private void tsMnuItemQLGV_Click(object sender, EventArgs e)
+        {
+            this.SwitchFrom(new frmQuanLyGV());
         }
     }
 }

@@ -52,6 +52,9 @@ namespace QuanLyHocSinh
         {
             if (this.dgvLopHoc.SelectedRows.Count > 0)
             {
+                this.txtMaLop.ReadOnly = true;
+                this.txtMaLop.BackColor = Color.LightGray;
+
                 DataGridViewRow row = this.dgvLopHoc.SelectedRows[0];
                 this.txtMaLop.Text = row.Cells["MALOP"].Value.ToString();
                 this.txtTenLop.Text = row.Cells["TENLOP"].Value.ToString();
@@ -82,6 +85,7 @@ namespace QuanLyHocSinh
         {
             InsertLopHoc(); 
         }
+
         private void UpdateLopHoc()
         {
             LopHoc lopHoc = new LopHoc();
@@ -105,20 +109,35 @@ namespace QuanLyHocSinh
                 UpdateLopHoc();
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(DialogResult.Yes == MessageBox.Show("Bạn có muốn lưu thay đổi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            if (DialogResult.Yes == MessageBox.Show("Bạn có muốn lưu thay đổi?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
                 lopHocBLL.Save();
+                this.dgvLopHoc.ClearSelection();
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
             lopHocBLL.Destroy();
+
+            this.dgvLopHoc.ClearSelection();
+            this.txtMaLop.ReadOnly = false;
+            this.txtMaLop.BackColor = Color.White;
+
+            this.txtMaLop.Focus();
+            this.txtMaLop.Text = string.Empty;
+            this.txtTenLop.Text = string.Empty;
+            this.cbMaNH.SelectedIndex = -1;
+            this.cbGVCN.SelectedIndex = -1;
+        }
+
+        private void frmQuanLyLH_Click(object sender, EventArgs e)
+        {
+            this.dgvLopHoc.ClearSelection();
+            this.txtMaLop.ReadOnly = false;
+            this.txtMaLop.BackColor = Color.White;
         }
     }
 }

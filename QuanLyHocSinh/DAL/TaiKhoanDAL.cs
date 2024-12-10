@@ -33,6 +33,19 @@ namespace DAL
             return GetDataSet(_da, "tblLOGIN_TABLE");
         }
 
+        public string Update(TaiKhoan tk)
+        {
+            DataRow row = DataSet.Tables["tblLOGIN_TABLE"].Select($"USERNAME = '{tk.Taikhoan}'")[0];
+            row["PASSWORD"] = tk.Matkhau;
+
+            return "Sửa thành công";
+        }
+
+        public void Destroy()
+        {
+            DataSet.Tables["tblLOGIN_TABLE"].RejectChanges();
+        }
+
         public void Save()
         {
             Save(_da, "tblLOGIN_TABLE");

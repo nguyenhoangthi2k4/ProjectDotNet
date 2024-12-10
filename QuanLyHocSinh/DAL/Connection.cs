@@ -51,7 +51,6 @@ namespace DAL
             return dt;
         }
 
-
         public DataSet GetDataSet(SqlDataAdapter adapter, string tblName)
         {
             adapter.Fill(DataSet, tblName);

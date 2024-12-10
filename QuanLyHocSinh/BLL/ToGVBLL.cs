@@ -40,7 +40,7 @@ namespace BLL
 
         public void Destroy()
         {
-            ToGVDAL?.Destroy();
+            ToGVDAL.Destroy();
         }
 
         public void Save()

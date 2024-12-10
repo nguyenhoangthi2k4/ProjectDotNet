@@ -34,6 +34,7 @@
             this.tsMnuItemDong = new System.Windows.Forms.ToolStripMenuItem();
             this.stMnuItemQLNH = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemQLLH = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMnuItemToGV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemQLGV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemQLHS = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemQLTN = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +55,7 @@
             this.tsMnuItemHeThong,
             this.stMnuItemQLNH,
             this.tsMnuItemQLLH,
+            this.tsMnuItemToGV,
             this.tsMnuItemQLGV,
             this.tsMnuItemQLHS,
             this.tsMnuItemQLTN,
@@ -128,6 +130,18 @@
             this.tsMnuItemQLLH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsMnuItemQLLH.Click += new System.EventHandler(this.tsMnuItemQLLH_Click);
             // 
+            // tsMnuItemToGV
+            // 
+            this.tsMnuItemToGV.AutoSize = false;
+            this.tsMnuItemToGV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.tsMnuItemToGV.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemToGV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsMnuItemToGV.Name = "tsMnuItemToGV";
+            this.tsMnuItemToGV.Size = new System.Drawing.Size(200, 50);
+            this.tsMnuItemToGV.Text = "Tổ Giáo Viên";
+            this.tsMnuItemToGV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsMnuItemToGV.Click += new System.EventHandler(this.tsMnuItemToGV_Click);
+            // 
             // tsMnuItemQLGV
             // 
             this.tsMnuItemQLGV.AutoSize = false;
@@ -176,7 +190,7 @@
             this.tsMnuItemDangXuat_btn.AutoSize = false;
             this.tsMnuItemDangXuat_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.tsMnuItemDangXuat_btn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.tsMnuItemDangXuat_btn.Margin = new System.Windows.Forms.Padding(0, 180, 0, 0);
+            this.tsMnuItemDangXuat_btn.Margin = new System.Windows.Forms.Padding(0, 130, 0, 0);
             this.tsMnuItemDangXuat_btn.Name = "tsMnuItemDangXuat_btn";
             this.tsMnuItemDangXuat_btn.Size = new System.Drawing.Size(200, 50);
             this.tsMnuItemDangXuat_btn.Text = "Đăng xuất";
@@ -201,7 +215,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin";
+            this.Text = "Admin Quản lý học sinh";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -222,5 +236,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsMnuItemQLTK;
         private System.Windows.Forms.ToolStripMenuItem tsMnuItemQLLH;
         private System.Windows.Forms.ToolStripMenuItem tsMnuItemDangXuat_btn;
+        private System.Windows.Forms.ToolStripMenuItem tsMnuItemToGV;
     }
 }
