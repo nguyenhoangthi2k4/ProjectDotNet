@@ -41,7 +41,7 @@
             this.lblMaSo = new System.Windows.Forms.Label();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.lblThongTin = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtSoDT = new System.Windows.Forms.MaskedTextBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -67,6 +67,9 @@
             // 
             this.cbGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cbGioiTinh.Location = new System.Drawing.Point(119, 148);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(158, 33);
@@ -158,13 +161,19 @@
             // 
             // dgvDanhSach
             // 
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSach.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Location = new System.Drawing.Point(34, 205);
+            this.dgvDanhSach.MultiSelect = false;
             this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.ReadOnly = true;
             this.dgvDanhSach.RowHeadersWidth = 62;
             this.dgvDanhSach.RowTemplate.Height = 28;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Size = new System.Drawing.Size(1201, 327);
             this.dgvDanhSach.TabIndex = 0;
+            this.dgvDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellContentClick);
             // 
             // lblThongTin
             // 
@@ -176,15 +185,15 @@
             this.lblThongTin.TabIndex = 21;
             this.lblThongTin.Text = "Thông tin học sinh";
             // 
-            // maskedTextBox1
+            // mtxtSoDT
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(735, 114);
-            this.maskedTextBox1.Mask = "(99) 000-00000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(146, 30);
-            this.maskedTextBox1.TabIndex = 22;
-            this.maskedTextBox1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtxtSoDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.mtxtSoDT.Location = new System.Drawing.Point(735, 114);
+            this.mtxtSoDT.Mask = "(99) 000-00000";
+            this.mtxtSoDT.Name = "mtxtSoDT";
+            this.mtxtSoDT.Size = new System.Drawing.Size(146, 30);
+            this.mtxtSoDT.TabIndex = 22;
+            this.mtxtSoDT.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // btnXoa
             // 
@@ -197,6 +206,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -209,6 +219,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -221,6 +232,7 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnTimKiem
             // 
@@ -245,6 +257,7 @@
             this.btnThemMoi.Text = "Thêm";
             this.btnThemMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemMoi.UseVisualStyleBackColor = false;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // btnSua
             // 
@@ -257,6 +270,7 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txtTimKiem
             // 
@@ -278,9 +292,12 @@
             // 
             // cbMaLop
             // 
+            this.cbMaLop.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbMaLop.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbMaLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbMaLop.FormattingEnabled = true;
             this.cbMaLop.Location = new System.Drawing.Point(1030, 143);
+            this.cbMaLop.MaxDropDownItems = 5;
             this.cbMaLop.Name = "cbMaLop";
             this.cbMaLop.Size = new System.Drawing.Size(186, 33);
             this.cbMaLop.TabIndex = 14;
@@ -299,7 +316,7 @@
             this.Controls.Add(this.btnThemMoi);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.mtxtSoDT);
             this.Controls.Add(this.lblThongTin);
             this.Controls.Add(this.dgvDanhSach);
             this.Controls.Add(this.lblMaSo);
@@ -317,6 +334,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQuanLyHS";
             this.Text = "frmQuanLyHS";
+            this.Click += new System.EventHandler(this.frmQuanLyHS_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -337,7 +355,7 @@
         private System.Windows.Forms.Label lblMaSo;
         private System.Windows.Forms.DataGridView dgvDanhSach;
         private System.Windows.Forms.Label lblThongTin;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtxtSoDT;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnHuy;

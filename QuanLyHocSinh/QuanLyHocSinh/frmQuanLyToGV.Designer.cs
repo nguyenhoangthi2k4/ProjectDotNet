@@ -54,10 +54,13 @@
             // 
             // cbTruongTo
             // 
+            this.cbTruongTo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbTruongTo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbTruongTo.BackColor = System.Drawing.Color.White;
             this.cbTruongTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbTruongTo.FormattingEnabled = true;
             this.cbTruongTo.Location = new System.Drawing.Point(780, 120);
+            this.cbTruongTo.MaxDropDownItems = 5;
             this.cbTruongTo.Name = "cbTruongTo";
             this.cbTruongTo.Size = new System.Drawing.Size(228, 33);
             this.cbTruongTo.TabIndex = 14;

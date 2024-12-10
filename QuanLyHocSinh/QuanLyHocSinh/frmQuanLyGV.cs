@@ -42,7 +42,7 @@ namespace QuanLyHocSinh
             this.dgvDanhSach.Columns["GIOITINH"].HeaderText = "Giới tính";
             this.dgvDanhSach.Columns["MONGD"].HeaderText = "Môn GD";
             this.dgvDanhSach.Columns["MATOGV"].HeaderText = "Mã tổ";
-            this.dgvDanhSach.Columns["USERNAME"].HeaderText = "Tên ĐN";
+            this.dgvDanhSach.Columns["USERNAME"].HeaderText = "Tài khoản";
             
 
             this.cbGioiTinh.SelectedIndex = -1; 

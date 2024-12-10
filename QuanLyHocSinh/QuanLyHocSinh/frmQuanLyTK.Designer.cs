@@ -44,6 +44,8 @@
             // 
             // cbQuyen
             // 
+            this.cbQuyen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbQuyen.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbQuyen.FormattingEnabled = true;
             this.cbQuyen.Items.AddRange(new object[] {

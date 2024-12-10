@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GiaoVienBLL.cs" />
+    <Compile Include="HocSinhBLL.cs" />
     <Compile Include="LopHocBLL.cs" />
     <Compile Include="NamHocBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

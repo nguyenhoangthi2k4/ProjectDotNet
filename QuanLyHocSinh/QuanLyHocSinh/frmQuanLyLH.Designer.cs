@@ -82,6 +82,8 @@
             // 
             // cbGVCN
             // 
+            this.cbGVCN.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbGVCN.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbGVCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbGVCN.FormattingEnabled = true;
             this.cbGVCN.Location = new System.Drawing.Point(1026, 120);

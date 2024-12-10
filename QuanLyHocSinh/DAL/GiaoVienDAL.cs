@@ -23,26 +23,11 @@ namespace DAL
             _daTk = new SqlDataAdapter(strSQLTK, Conn);
             _daTk.Fill(DataSet, "tblLOGINTABLE");
 
-            // InsertCommand
-            //string ISQL = @"INSERT INTO GIAOVIEN(MAGV, HOTEN, NGAYSINH, QUEQUAN, EMAIL, SODT, GIOITINH, MATOGV, MONGD) VALUES (@MAGV, @HOTEN, @NGAYSINH, @QUEQUAN, @EMAIL, @SODT, @GIOITINH, @MATOGV, @MONGD)";
-            //SqlCommand Icmd = new SqlCommand(ISQL, Conn);
-            //Icmd.Parameters.Add("@MAGV", SqlDbType.NVarChar, 5, "MAGV");
-            //Icmd.Parameters.Add("@HOTEN", SqlDbType.NVarChar, 255, "HOTEN");
-            //Icmd.Parameters.Add("@NGAYSINH", SqlDbType.Date, 10, "NGAYSINH");
-            //Icmd.Parameters.Add("@QUEQUAN", SqlDbType.NVarChar, 255, "QUEQUAN");
-            //Icmd.Parameters.Add("@EMAIL", SqlDbType.NVarChar, 255, "EMAIL");
-            //Icmd.Parameters.Add("@SODT", SqlDbType.NVarChar, 20, "SODT");
-            //Icmd.Parameters.Add("@GIOITINH", SqlDbType.NVarChar, 10, "GIOITINH");
-            //Icmd.Parameters.Add("@MATOGV", SqlDbType.NVarChar, 10, "MATOGV");
-            //Icmd.Parameters.Add("@MONGD", SqlDbType.NVarChar, 30, "MONGD");
-            //_da.InsertCommand = Icmd;
-
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(_da);
             SqlCommandBuilder commandBuilderTK = new SqlCommandBuilder(_daTk);            
         }
         public DataSet GetDataSet()
         {
-            //GetDataSet(_daTk, "tblLOGINTABLE");
             return GetDataSet(_da, "tblGIAOVIEN");
         }
 
@@ -53,11 +38,21 @@ namespace DAL
             return CheckCondition(dt, conditon);
         }
 
+        public bool CheckEmail(GiaoVien giaoVien)
+        {
+            DataTable dt = DataSet.Tables["tblGIAOVIEN"];
+            string conditon = $"EMAIL = '{giaoVien.Email}'";
+            return CheckCondition(dt, conditon);
+        }
+
         public string Insert(GiaoVien giaoVien)
         {
             if (CheckPrimary(giaoVien) == false)
                 return "Mã số đã tồn tại";
-            
+
+            if (CheckEmail(giaoVien) == false)
+                return "Email đã tồn tại";
+
             DataRow row = DataSet.Tables["tblGIAOVIEN"].NewRow();
             row["MAGV"] = giaoVien.MaGV;
             row["HOTEN"] = giaoVien.TenGV;
