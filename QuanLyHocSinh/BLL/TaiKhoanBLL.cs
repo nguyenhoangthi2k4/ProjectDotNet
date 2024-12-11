@@ -55,23 +55,13 @@ namespace BLL
             taiKhoanDAL.Save();
         }
 
-        public string[] Login(TaiKhoan tk)
+        public string CheckLogin(TaiKhoan tk)
         {
-            string[] taikhoan = new string[2];
-            if (tk.Taikhoan == " ")               
-                taikhoan[0] = "Tài khoản không hợp lệ";
-            else if (tk.Matkhau == " ")
-                taikhoan[0] = "Tài khoản không hợp lệ";
-            else
-            {
-                string tmp = taiKhoanDAL.CheckLogin(tk);
-                if (tmp != "Tài khoản không hợp lệ")                              
-                    taikhoan = tmp.Split(' ');      
-                else
-                    taikhoan[0] = tmp;
-            }    
-            return taikhoan;
+            if(tk.Taikhoan == "" || tk.Matkhau == "")
+                return "Tài khoản không hợp lệ";
+
+            string user = taiKhoanDAL.CheckLogin(tk);
+            return user;
         }
-       
     }
 }

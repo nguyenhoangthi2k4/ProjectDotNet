@@ -13,11 +13,15 @@ namespace QuanLyHocSinh
     public partial class frmStudentManagement : Form
     {
         private Form _currentForm = null;
+        private string _maGV;
+        public string MaGV { get => _maGV; set => _maGV = value; }
 
-        public frmStudentManagement()
+        public frmStudentManagement(string maGV)
         {
             InitializeComponent();
-            this.SwitchFrom(new frmQuanLy());
+
+            MaGV = maGV;
+            this.SwitchFrom(new frmQuanLy(MaGV));
         }
 
         public void SwitchFrom(Form childForm)
@@ -49,7 +53,7 @@ namespace QuanLyHocSinh
 
         private void tsMnItemQuanLy_Click(object sender, EventArgs e)
         {
-            this.SwitchFrom(new frmQuanLy());
+            this.SwitchFrom(new frmQuanLy(MaGV));
         }
 
         private void tsMnItemDanhGia_Click(object sender, EventArgs e)
@@ -74,7 +78,7 @@ namespace QuanLyHocSinh
 
         private void tsMnItemDiemSo_Click(object sender, EventArgs e)
         {
-            this.SwitchFrom(new frmDiemSo());
+            this.SwitchFrom(new frmDiemSo(MaGV));
         }
     }
 }

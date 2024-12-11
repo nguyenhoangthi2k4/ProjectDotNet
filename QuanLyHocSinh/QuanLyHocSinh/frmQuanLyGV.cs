@@ -177,6 +177,26 @@ namespace QuanLyHocSinh
             }
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if(this.txtTimKiem.Text != "")
+            {
+                DataRow[] findrow = dtGV.Select($"HOTEN = '{this.txtTimKiem.Text}'");
+                if (findrow.Length > 0)
+                {
+                    this.dgvDanhSach.ClearSelection();
+                    this.dgvDanhSach.Rows[dtGV.Rows.IndexOf(findrow[0])].Selected = true;
+                    this.dgvDanhSach_CellContentClick(null, null);
+                    this.txtTimKiem.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.txtTimKiem.Clear();
+                }
+            }
+        }
+
         private void frmQuanLyGV_Click(object sender, EventArgs e)
         {
             this.dgvDanhSach.ClearSelection();

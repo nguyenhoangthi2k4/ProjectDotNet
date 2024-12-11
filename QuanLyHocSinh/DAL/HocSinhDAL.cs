@@ -57,6 +57,12 @@ namespace DAL
             return GetDataSet(_da, "tblHOCSINH");
         }
 
+        public DataSet GetDataSet(string Malop)
+        {
+            SqlDataAdapter _daHS_LopHoc = new SqlDataAdapter($"SELECT * FROM HOCSINH WHERE MALOP = '{Malop}'", Conn);
+            return GetDataSet(_daHS_LopHoc, "tblHOCSINH_MALOP");
+        }
+
         public bool CheckPrimary(HocSinh hs)
         {
             DataTable dt = DataSet.Tables["tblHOCSINH"];

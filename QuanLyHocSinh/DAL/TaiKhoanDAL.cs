@@ -47,34 +47,40 @@ namespace DAL
         public string CheckLogin(TaiKhoan tk)
         {
             string user = null;
-            SqlParameter[] para = new SqlParameter[]
+            SqlDataReader dr;
+            try
             {
-                new SqlParameter("@tenTK", tk.Taikhoan),
-                new SqlParameter("@matKhau", tk.Matkhau)
-            };
-            using (SqlCommand cmd = new SqlCommand("sp_checkLogin_LOGIN_TABLE", Conn))
-            {
-                if (Conn.State == ConnectionState.Closed)
-                    Conn.Open();                
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddRange(para);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.HasRows)
+                SqlParameter[] para = new SqlParameter[]
                 {
+                    new SqlParameter("@tenTK", tk.Taikhoan),
+                    new SqlParameter("@matKhau", tk.Matkhau)
+                };
+                SqlCommand cmd = new SqlCommand("sp_checkLogin_LOGIN_TABLE", Conn);
+                cmd.Parameters.AddRange(para);
+                cmd.CommandType = CommandType.StoredProcedure;
+                Conn.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.HasRows)
                     while (dr.Read())
                     {
-                        user = dr.GetString(0) + " " + dr.GetString(2);                        
+                        user = dr.GetString(0) + " " + dr.GetString(2);
                         break;
-                    }                    
-                }
+                    }
                 else
-                {
-                    dr.Close();
-                    return "Tài khoản không hợp lệ";
-                } 
+                    user = "Tài khoản không hợp lệ";
                 dr.Close();
             }
-            return user;  
+            catch (Exception )
+            {
+                user = "Lỗi kết nối";
+            }
+            finally
+            {
+                if(Conn.State == ConnectionState.Open)
+                    Conn.Close();                
+            }
+            return user;
         }
+
     }
 }

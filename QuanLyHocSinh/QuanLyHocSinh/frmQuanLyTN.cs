@@ -184,5 +184,25 @@ namespace QuanLyHocSinh
                 this.dgvDanhSachTN.Columns["NGAYDONG_BHYT"].HeaderText = "Ngày đóng";
             }    
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if(this.txtTimKiem.Text != "")
+            {
+                DataRow dr = dtTN.Select($"HOTEN = '{this.txtTimKiem.Text}'")[0];
+                if(dr != null)
+                {
+                    this.txtTimKiem.Clear();
+                    this.dgvDanhSachTN.ClearSelection();
+                    this.dgvDanhSachTN_CellContentClick(null, null);
+                    this.dgvDanhSachTN.Rows[dtTN.Rows.IndexOf(dr)].Selected = true;
+                }    
+                else
+                {
+                    MessageBox.Show("Không tìm thấy học sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.txtTimKiem.Clear();
+                }    
+            }    
+        }
     }
 }

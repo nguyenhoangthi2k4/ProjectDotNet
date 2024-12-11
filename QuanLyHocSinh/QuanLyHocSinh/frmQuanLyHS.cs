@@ -157,5 +157,25 @@ namespace QuanLyHocSinh
             this.txtMaSo.BackColor = Color.White;
             this.dgvDanhSach.ClearSelection();
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (this.txtTimKiem.Text != "")
+            {
+                DataRow dr = dtHS.Select($"HOTEN = '{this.txtTimKiem.Text}'")[0];
+                if (dr != null)
+                {
+                    this.dgvDanhSach.ClearSelection();
+                    this.dgvDanhSach.Rows[dtHS.Rows.IndexOf(dr)].Selected = true;
+                    this.dgvDanhSach_CellContentClick(null, null);
+                    this.txtTimKiem.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy học sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.txtTimKiem.Clear();
+                }
+            }
+        }
     }
 }

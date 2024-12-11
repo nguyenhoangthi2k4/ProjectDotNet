@@ -20,6 +20,11 @@ namespace BLL
             return hocSinhDAL.GetDataSet().Tables["tblHOCSINH"];
         }
 
+        public DataTable GetDataByMaLop(string MaLop)
+        {
+            return hocSinhDAL.GetDataSet(MaLop).Tables["tblHOCSINH_MALOP"];
+        }
+
         public bool CheckInput(HocSinh hs)
         {
             if (hs.MaHS == "" || hs.MaHS.Length != 5 || hs.HoTen == "" || hs.GioiTinh == null || hs.DiaChi == "" || hs.SoDT == "" || hs.SoDT.Length != 10 || hs.MaLop == null)

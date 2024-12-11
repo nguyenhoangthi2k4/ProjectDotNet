@@ -55,7 +55,6 @@
             this.lblMaNH = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.lblHoTen = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachTN)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -239,6 +238,7 @@
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -346,20 +346,12 @@
             this.lblHoTen.TabIndex = 52;
             this.lblHoTen.Text = "Họ tên:";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(530, 69);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox1.TabIndex = 54;
-            // 
             // frmQuanLyTN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(1265, 644);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.lblHoTen);
             this.Controls.Add(this.panel1);
@@ -422,6 +414,5 @@
         private System.Windows.Forms.Button btnLoc;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label lblHoTen;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
