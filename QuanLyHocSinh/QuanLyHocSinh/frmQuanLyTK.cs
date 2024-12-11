@@ -27,7 +27,7 @@ namespace QuanLyHocSinh
             this.dgvDanhSach.Columns["PASSWORD"].HeaderText = "Mật khẩu";
             this.dgvDanhSach.Columns["QUYEN"].HeaderText = "Quyền";
 
-            this.txtTenDN.ReadOnly = true;
+            this.txtTenDN.Enabled = false;
             this.txtTenDN.BackColor = Color.LightGray;
         }
 
@@ -77,6 +77,10 @@ namespace QuanLyHocSinh
             {
                 taiKhoanBLL.Save();
                 this.dgvDanhSach.ClearSelection();
+
+                this.txtTenDN.Text = string.Empty;
+                this.txtMatKhau.Text = string.Empty;
+                this.cbQuyen.SelectedIndex = -1;
             }                
         }
     }

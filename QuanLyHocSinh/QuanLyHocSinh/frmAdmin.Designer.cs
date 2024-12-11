@@ -173,6 +173,7 @@
             this.tsMnuItemQLTN.Size = new System.Drawing.Size(200, 50);
             this.tsMnuItemQLTN.Text = "Thu ngân";
             this.tsMnuItemQLTN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsMnuItemQLTN.Click += new System.EventHandler(this.tsMnuItemQLTN_Click);
             // 
             // tsMnuItemQLTK
             // 

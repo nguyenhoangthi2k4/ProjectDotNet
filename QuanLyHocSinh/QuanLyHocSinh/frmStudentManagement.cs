@@ -59,7 +59,7 @@ namespace QuanLyHocSinh
 
         private void tsMnItemThuNgan_Click(object sender, EventArgs e)
         {
-            this.SwitchFrom(new frmThuNgan());
+            this.SwitchFrom(new frmQuanLyTN());
         }
 
         private void tsMnuItemPhuHuynh_Click(object sender, EventArgs e)

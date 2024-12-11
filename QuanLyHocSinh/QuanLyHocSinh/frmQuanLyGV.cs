@@ -44,7 +44,6 @@ namespace QuanLyHocSinh
             this.dgvDanhSach.Columns["MATOGV"].HeaderText = "Mã tổ";
             this.dgvDanhSach.Columns["USERNAME"].HeaderText = "Tài khoản";
             
-
             this.cbGioiTinh.SelectedIndex = -1; 
         }
         private void dgvDanhSach_CellContentClick(object sender, DataGridViewCellEventArgs e)

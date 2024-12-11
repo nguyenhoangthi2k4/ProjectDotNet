@@ -18,14 +18,7 @@ namespace DAL
         {
             string strSQL = "SELECT * FROM LOGIN_TABLE";
             _da = new SqlDataAdapter(strSQL, Conn);
-
-            TaiKhoan tk = new TaiKhoan();
-            string ISQL = @"INSERT INTO LOGIN_TABLE(USERNAME, PASSWORD, QUYEN) VALUES(@USERNAME, @PASSWORD, @QUYEN)";
-            SqlCommand Icmd = new SqlCommand(ISQL, Conn);
-            Icmd.Parameters.Add("@USERNAME", SqlDbType.VarChar, 15, "USERNAME"); // USERNAME là column trong giá trị trong table của DataSet
-            Icmd.Parameters.Add("@PASSWORD", SqlDbType.NVarChar, 15, "PASSWORD");
-            Icmd.Parameters.Add("@QUYEN", SqlDbType.NVarChar, 5, "QUYEN");
-            _da.InsertCommand = Icmd;
+            SqlCommandBuilder commandBuilder = new SqlCommandBuilder(_da);
         }
 
         public DataSet GetDataSet()

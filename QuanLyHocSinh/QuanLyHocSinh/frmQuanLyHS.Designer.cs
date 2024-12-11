@@ -181,9 +181,9 @@
             this.lblThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.lblThongTin.Location = new System.Drawing.Point(28, 48);
             this.lblThongTin.Name = "lblThongTin";
-            this.lblThongTin.Size = new System.Drawing.Size(329, 40);
+            this.lblThongTin.Size = new System.Drawing.Size(351, 40);
             this.lblThongTin.TabIndex = 21;
-            this.lblThongTin.Text = "Thông tin học sinh";
+            this.lblThongTin.Text = "Danh sách học sinh";
             // 
             // mtxtSoDT
             // 

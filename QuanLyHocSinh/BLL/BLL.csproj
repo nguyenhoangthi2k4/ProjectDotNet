@@ -47,6 +47,7 @@
     <Compile Include="NamHocBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoanBLL.cs" />
+    <Compile Include="ThuNganBLL.cs" />
     <Compile Include="ToGVBLL.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangDiemDAL.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="GiaoVienDAL.cs" />
+    <Compile Include="HanhKiemDAL.cs" />
     <Compile Include="HocSinhDAL.cs" />
     <Compile Include="LopHocDAL.cs" />
     <Compile Include="NamHocDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoanDAL.cs" />
+    <Compile Include="ThuNganDAL.cs" />
     <Compile Include="ToGVDAL.cs" />
   </ItemGroup>
   <ItemGroup>

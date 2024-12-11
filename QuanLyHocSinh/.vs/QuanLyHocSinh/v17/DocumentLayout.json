@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\projectdotnet\\quanlyhocsinh\\quanlyhocsinh\\frmadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|solutionrelative:quanlyhocsinh\\frmadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|d:\\2022 - 2026\\hoc ki 5\\c#\\projectdotnet\\quanlyhocsinh\\dal\\taikhoandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D46104B-D6C5-4653-B152-37FC518B561B}|DAL\\DAL.csproj|solutionrelative:dal\\taikhoandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\quanlyhocsinh\\frmquanlyhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|solutionrelative:quanlyhocsinh\\frmquanlyhs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\quanlyhocsinh\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D63F4731-2D32-4718-B3A0-BE49A7379D08}|QuanLyHocSinh\\QuanLyHocSinh.csproj|solutionrelative:quanlyhocsinh\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,26 +47,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmAdmin.cs [Design]",
-              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmAdmin.cs",
-              "RelativeDocumentMoniker": "QuanLyHocSinh\\frmAdmin.cs",
-              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmAdmin.cs [Design]",
-              "RelativeToolTip": "QuanLyHocSinh\\frmAdmin.cs [Design]",
+              "Title": "TaiKhoanDAL.cs",
+              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\TaiKhoanDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\TaiKhoanDAL.cs",
+              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\DAL\\TaiKhoanDAL.cs",
+              "RelativeToolTip": "DAL\\TaiKhoanDAL.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAhwDUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:10:04.725Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-11T05:39:21.504Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmQuanLyHS.cs [Design]",
-              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyHS.cs",
-              "RelativeDocumentMoniker": "QuanLyHocSinh\\frmQuanLyHS.cs",
-              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmQuanLyHS.cs [Design]",
-              "RelativeToolTip": "QuanLyHocSinh\\frmQuanLyHS.cs [Design]",
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmLogin.cs",
+              "RelativeDocumentMoniker": "QuanLyHocSinh\\frmLogin.cs",
+              "ToolTip": "D:\\2022 - 2026\\HOC KI 5\\C#\\ProjectDotNet\\QuanLyHocSinh\\QuanLyHocSinh\\frmLogin.cs",
+              "RelativeToolTip": "QuanLyHocSinh\\frmLogin.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T12:52:53.055Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-11T05:38:39.78Z"
             }
           ]
         }
