@@ -30,7 +30,6 @@ namespace QuanLyHocSinh
             this.dgvDanhSach.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
             this.dgvDanhSach.Columns["DIACHI"].HeaderText = "Địa chỉ";
             this.dgvDanhSach.Columns["SODT"].HeaderText = "Số điện thoại";
-            this.dgvDanhSach.Columns["MAPH"].Visible = false;
             this.dgvDanhSach.Columns["GIOITINH"].HeaderText = "Giới tính";
             this.dgvDanhSach.Columns["MALOP"].HeaderText = "Mã lớp";
             this.dgvDanhSach.Columns["USERNAME"].HeaderText = "Tài khoản";
@@ -74,7 +73,6 @@ namespace QuanLyHocSinh
             hs.MaLop = this.cbMaLop.SelectedValue?.ToString();
             hs.GioiTinh = this.cbGioiTinh.SelectedItem?.ToString();
             hs.Taikhoan = this.txtMaSo.Text.ToUpper();
-            hs.MaPH = null;
             hs.Matkhau = this.txtMaSo.Text.ToLower();
 
             string result = hocSinhBLL.Insert(hs);
@@ -116,7 +114,7 @@ namespace QuanLyHocSinh
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            hocSinhBLL.Destroy();
+            hocSinhBLL.Cancel();
 
             this.txtMaSo.Focus();
             this.txtMaSo.ReadOnly = false;
@@ -162,11 +160,12 @@ namespace QuanLyHocSinh
         {
             if (this.txtTimKiem.Text != "")
             {
-                DataRow dr = dtHS.Select($"HOTEN = '{this.txtTimKiem.Text}'")[0];
-                if (dr != null)
+                DataRow[] findRows = dtHS.Select($"HOTEN = '{this.txtTimKiem.Text}'");
+                if (findRows.Length > 0)
                 {
+                    DataRow findRow = findRows[0];
                     this.dgvDanhSach.ClearSelection();
-                    this.dgvDanhSach.Rows[dtHS.Rows.IndexOf(dr)].Selected = true;
+                    this.dgvDanhSach.Rows[dtHS.Rows.IndexOf(findRow)].Selected = true;
                     this.dgvDanhSach_CellContentClick(null, null);
                     this.txtTimKiem.Clear();
                 }

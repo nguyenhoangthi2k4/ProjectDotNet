@@ -73,12 +73,6 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhuHuynh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPhuHuynh.Designer.cs">
-      <DependentUpon>frmPhuHuynh.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmQuanLyGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,12 +115,6 @@
     <Compile Include="frmStudentManagement.Designer.cs">
       <DependentUpon>frmStudentManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThongTinCaNhanGV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongTinCaNhanGV.Designer.cs">
-      <DependentUpon>frmThongTinCaNhanGV.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmQuanLyTN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +126,12 @@
     </Compile>
     <Compile Include="frmQuanLyToGV.Designer.cs">
       <DependentUpon>frmQuanLyToGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinGV.Designer.cs">
+      <DependentUpon>frmThongTinGV.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <EmbeddedResource Include="frmAdmin.resx">
@@ -151,9 +145,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPhuHuynh.resx">
-      <DependentUpon>frmPhuHuynh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLy.resx">
       <DependentUpon>frmQuanLy.cs</DependentUpon>
@@ -176,14 +167,14 @@
     <EmbeddedResource Include="frmStudentManagement.resx">
       <DependentUpon>frmStudentManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmThongTinCaNhanGV.resx">
-      <DependentUpon>frmThongTinCaNhanGV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyTN.resx">
       <DependentUpon>frmQuanLyTN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyToGV.resx">
       <DependentUpon>frmQuanLyToGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinGV.resx">
+      <DependentUpon>frmThongTinGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -218,6 +209,57 @@
       <Project>{b4b9372e-5eb1-4b09-be0d-ad3a7d05f53a}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stamp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\access-control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diskette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instructor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verified-account.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

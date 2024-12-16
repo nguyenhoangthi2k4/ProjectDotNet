@@ -31,6 +31,17 @@ namespace DAL
             return GetDataSet(_da, "tblGIAOVIEN");
         }
 
+        public DataTable GetTableByMaGV(string MaGV)
+        {
+            DataTable dtGV = new DataTable();
+            string strSQL = $"SELECT * FROM GIAOVIEN WHERE MAGV = '{MaGV}'";
+            using(SqlDataAdapter da = new SqlDataAdapter(strSQL, Conn))
+            {
+                da.Fill(dtGV);
+                return dtGV;
+            }
+        }
+
         public bool CheckPrimary(GiaoVien giaoVien)
         {
             DataTable dt = DataSet.Tables["tblGIAOVIEN"];
@@ -91,7 +102,7 @@ namespace DAL
             return "Sửa Thành công";
         }
 
-        public void Destroy()
+        public void Cancel()
         {
             DataSet.Tables["tblGIAOVIEN"].RejectChanges();
         }

@@ -57,6 +57,7 @@ namespace DAL
         {
             string strSQL = $"SELECT tn.MANH, tn.MAHK, tn.MAHS, hs.HOTEN, tn.SOTIEN_HP, tn.TINHTRANG_HP, tn.NGAYDONG_HP, tn.SOTIEN_BHYT, tn.TINHTRANG_BHYT, tn.NGAYDONG_BHYT FROM THUNGAN tn JOIN HOCSINH hs ON tn.MAHS = hs.MAHS WHERE tn.MANH = '{nh.MaNH}' AND tn.MAHK = '{nh.MaHK}'";
             _da.SelectCommand = new SqlCommand(strSQL, Conn);
+           //_da = new SqlDataAdapter(strSQL, Conn);
             return GetDataSet(_da, "tblTHUNGAN_NH");
         }
 
@@ -83,7 +84,7 @@ namespace DAL
             return "Cập nhật thành công";            
         }
 
-        public void Destroy()
+        public void Cancel()
         {
             DataSet.Tables["tblTHUNGAN"].RejectChanges();
         }

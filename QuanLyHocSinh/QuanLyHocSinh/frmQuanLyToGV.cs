@@ -94,7 +94,7 @@ namespace QuanLyHocSinh
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            toGVBLL.Destroy();
+            toGVBLL.Cancel();
 
             this.txtMaToGV.ReadOnly = false;
             this.txtMaToGV.BackColor = Color.White;

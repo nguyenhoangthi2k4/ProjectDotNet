@@ -22,7 +22,7 @@ namespace BLL
 
         public DataTable GetDataByMaLop(string MaLop)
         {
-            return hocSinhDAL.GetDataSet(MaLop).Tables["tblHOCSINH_MALOP"];
+            return hocSinhDAL.GetDataSetByMaLop(MaLop).Tables["tblHOCSINH_ByMaLop"];
         }
 
         public bool CheckInput(HocSinh hs)
@@ -46,9 +46,9 @@ namespace BLL
             return hocSinhDAL.Update(hs);
         }
 
-        public void Destroy()
+        public void Cancel()
         {
-            hocSinhDAL.Destroy();
+            hocSinhDAL.Cancel();
         }
         public void Save()
         {

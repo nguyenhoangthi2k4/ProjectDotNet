@@ -24,19 +24,10 @@ namespace DTO
         public string Gdcd { get => _gdcd; set => _gdcd = value; }
         public string Dtb { get => _dtb; set => _dtb = value; }
 
-        public string TinhDTB()
+        public void TinhDTB()
         {
-            double toan = double.Parse(Toan);
-            double ngVan = double.Parse(NgVan);
-            double ngNgu = double.Parse(NgNgu);
-            double vatLy = double.Parse(VatLy);
-            double hoaHoc = double.Parse(HoaHoc);
-            double sinhHoc = double.Parse(SinhHoc);
-            double diaLy = double.Parse(DiaLy);
-            double lichSu = double.Parse(LichSu);
-            double gdcd = double.Parse(Gdcd);
-            double dtb = (toan + ngVan + ngNgu + vatLy + hoaHoc + sinhHoc + diaLy + lichSu + gdcd) / 9;
-            return Math.Round(dtb, 2).ToString();
+            double tmp = (double.Parse(Toan) + double.Parse(NgVan) + double.Parse(NgNgu) + double.Parse(VatLy) + double.Parse(HoaHoc) + double.Parse(SinhHoc) + double.Parse(DiaLy) + double.Parse(LichSu) + double.Parse(Gdcd))/9;
+            this.Dtb = tmp.ToString();
         }
     }
 }

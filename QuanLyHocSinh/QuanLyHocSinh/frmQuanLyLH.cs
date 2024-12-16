@@ -120,7 +120,7 @@ namespace QuanLyHocSinh
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            lopHocBLL.Destroy();
+            lopHocBLL.Cancel();
 
             this.dgvLopHoc.ClearSelection();
             this.txtMaLop.ReadOnly = false;

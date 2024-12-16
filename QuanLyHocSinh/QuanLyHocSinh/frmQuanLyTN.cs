@@ -95,7 +95,7 @@ namespace QuanLyHocSinh
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            thuNganBLL.Destroy();
+            thuNganBLL.Cancel();
 
             this.dgvDanhSachTN.ClearSelection();
 

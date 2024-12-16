@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tsMnuItemHeThong = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsMnuItemDangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsMnuItemDong = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnContainer = new System.Windows.Forms.Panel();
             this.stMnuItemQLNH = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemQLLH = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemToGV = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +39,6 @@
             this.tsMnuItemQLTN = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemQLTK = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemDangXuat_btn = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnContainer = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +50,6 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsMnuItemHeThong,
             this.stMnuItemQLNH,
             this.tsMnuItemQLLH,
             this.tsMnuItemToGV,
@@ -69,49 +66,23 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // tsMnuItemHeThong
+            // pnContainer
             // 
-            this.tsMnuItemHeThong.AutoSize = false;
-            this.tsMnuItemHeThong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsMnuItemDangXuat,
-            this.tsMnuItemDong});
-            this.tsMnuItemHeThong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsMnuItemHeThong.ForeColor = System.Drawing.Color.DarkBlue;
-            this.tsMnuItemHeThong.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.tsMnuItemHeThong.Name = "tsMnuItemHeThong";
-            this.tsMnuItemHeThong.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.tsMnuItemHeThong.Size = new System.Drawing.Size(200, 50);
-            this.tsMnuItemHeThong.Text = "Hệ thống";
-            this.tsMnuItemHeThong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tsMnuItemDangXuat
-            // 
-            this.tsMnuItemDangXuat.AutoSize = false;
-            this.tsMnuItemDangXuat.BackColor = System.Drawing.Color.SteelBlue;
-            this.tsMnuItemDangXuat.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsMnuItemDangXuat.ForeColor = System.Drawing.Color.DarkBlue;
-            this.tsMnuItemDangXuat.Name = "tsMnuItemDangXuat";
-            this.tsMnuItemDangXuat.Size = new System.Drawing.Size(230, 40);
-            this.tsMnuItemDangXuat.Text = "Đăng &xuất";
-            this.tsMnuItemDangXuat.Click += new System.EventHandler(this.tsMnuItemDangXuat_Click);
-            // 
-            // tsMnuItemDong
-            // 
-            this.tsMnuItemDong.AutoSize = false;
-            this.tsMnuItemDong.BackColor = System.Drawing.Color.SteelBlue;
-            this.tsMnuItemDong.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsMnuItemDong.ForeColor = System.Drawing.Color.DarkBlue;
-            this.tsMnuItemDong.Name = "tsMnuItemDong";
-            this.tsMnuItemDong.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.tsMnuItemDong.Size = new System.Drawing.Size(230, 40);
-            this.tsMnuItemDong.Text = "&Đóng";
-            this.tsMnuItemDong.Click += new System.EventHandler(this.tsMnuItemDong_Click);
+            this.pnContainer.BackColor = System.Drawing.SystemColors.Window;
+            this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContainer.Location = new System.Drawing.Point(213, 0);
+            this.pnContainer.Name = "pnContainer";
+            this.pnContainer.Size = new System.Drawing.Size(1265, 644);
+            this.pnContainer.TabIndex = 1;
             // 
             // stMnuItemQLNH
             // 
             this.stMnuItemQLNH.AutoSize = false;
             this.stMnuItemQLNH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.stMnuItemQLNH.ForeColor = System.Drawing.Color.DarkBlue;
+            this.stMnuItemQLNH.Image = global::QuanLyHocSinh.Properties.Resources.calendar;
+            this.stMnuItemQLNH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.stMnuItemQLNH.Margin = new System.Windows.Forms.Padding(0, 60, 0, 0);
             this.stMnuItemQLNH.Name = "stMnuItemQLNH";
             this.stMnuItemQLNH.Size = new System.Drawing.Size(200, 50);
             this.stMnuItemQLNH.Text = "Năm học";
@@ -123,6 +94,8 @@
             this.tsMnuItemQLLH.AutoSize = false;
             this.tsMnuItemQLLH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.tsMnuItemQLLH.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemQLLH.Image = global::QuanLyHocSinh.Properties.Resources.classroom;
+            this.tsMnuItemQLLH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsMnuItemQLLH.Name = "tsMnuItemQLLH";
             this.tsMnuItemQLLH.Padding = new System.Windows.Forms.Padding(10, 0, 6, 0);
             this.tsMnuItemQLLH.Size = new System.Drawing.Size(200, 50);
@@ -135,6 +108,7 @@
             this.tsMnuItemToGV.AutoSize = false;
             this.tsMnuItemToGV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.tsMnuItemToGV.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemToGV.Image = global::QuanLyHocSinh.Properties.Resources.instructor;
             this.tsMnuItemToGV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsMnuItemToGV.Name = "tsMnuItemToGV";
             this.tsMnuItemToGV.Size = new System.Drawing.Size(200, 50);
@@ -147,6 +121,8 @@
             this.tsMnuItemQLGV.AutoSize = false;
             this.tsMnuItemQLGV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.tsMnuItemQLGV.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemQLGV.Image = global::QuanLyHocSinh.Properties.Resources.teacher;
+            this.tsMnuItemQLGV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsMnuItemQLGV.Name = "tsMnuItemQLGV";
             this.tsMnuItemQLGV.Size = new System.Drawing.Size(200, 50);
             this.tsMnuItemQLGV.Text = "Giáo viên";
@@ -158,6 +134,8 @@
             this.tsMnuItemQLHS.AutoSize = false;
             this.tsMnuItemQLHS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.tsMnuItemQLHS.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemQLHS.Image = global::QuanLyHocSinh.Properties.Resources.graduated;
+            this.tsMnuItemQLHS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsMnuItemQLHS.Name = "tsMnuItemQLHS";
             this.tsMnuItemQLHS.Size = new System.Drawing.Size(200, 50);
             this.tsMnuItemQLHS.Text = "Học sinh";
@@ -169,6 +147,8 @@
             this.tsMnuItemQLTN.AutoSize = false;
             this.tsMnuItemQLTN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.tsMnuItemQLTN.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemQLTN.Image = global::QuanLyHocSinh.Properties.Resources.fee;
+            this.tsMnuItemQLTN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsMnuItemQLTN.Name = "tsMnuItemQLTN";
             this.tsMnuItemQLTN.Size = new System.Drawing.Size(200, 50);
             this.tsMnuItemQLTN.Text = "Thu ngân";
@@ -180,6 +160,8 @@
             this.tsMnuItemQLTK.AutoSize = false;
             this.tsMnuItemQLTK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.tsMnuItemQLTK.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemQLTK.Image = global::QuanLyHocSinh.Properties.Resources.verified_account;
+            this.tsMnuItemQLTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsMnuItemQLTK.Name = "tsMnuItemQLTK";
             this.tsMnuItemQLTK.Size = new System.Drawing.Size(200, 50);
             this.tsMnuItemQLTK.Text = "Tài khoản";
@@ -191,20 +173,13 @@
             this.tsMnuItemDangXuat_btn.AutoSize = false;
             this.tsMnuItemDangXuat_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.tsMnuItemDangXuat_btn.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemDangXuat_btn.Image = global::QuanLyHocSinh.Properties.Resources.exit;
             this.tsMnuItemDangXuat_btn.Margin = new System.Windows.Forms.Padding(0, 130, 0, 0);
             this.tsMnuItemDangXuat_btn.Name = "tsMnuItemDangXuat_btn";
             this.tsMnuItemDangXuat_btn.Size = new System.Drawing.Size(200, 50);
             this.tsMnuItemDangXuat_btn.Text = "Đăng xuất";
             this.tsMnuItemDangXuat_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pnContainer
-            // 
-            this.pnContainer.BackColor = System.Drawing.SystemColors.Window;
-            this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContainer.Location = new System.Drawing.Point(213, 0);
-            this.pnContainer.Name = "pnContainer";
-            this.pnContainer.Size = new System.Drawing.Size(1265, 644);
-            this.pnContainer.TabIndex = 1;
+            this.tsMnuItemDangXuat_btn.Click += new System.EventHandler(this.tsMnuItemDangXuat_btn_Click);
             // 
             // frmAdmin
             // 
@@ -213,10 +188,11 @@
             this.ClientSize = new System.Drawing.Size(1478, 644);
             this.Controls.Add(this.pnContainer);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin Quản lý học sinh";
+            this.Text = "Admin";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -226,9 +202,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tsMnuItemHeThong;
-        private System.Windows.Forms.ToolStripMenuItem tsMnuItemDangXuat;
-        private System.Windows.Forms.ToolStripMenuItem tsMnuItemDong;
         private System.Windows.Forms.ToolStripMenuItem tsMnuItemQLHS;
         private System.Windows.Forms.ToolStripMenuItem tsMnuItemQLGV;
         private System.Windows.Forms.Panel pnContainer;

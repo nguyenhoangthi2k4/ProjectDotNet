@@ -21,10 +21,9 @@ namespace BLL
 
         public DataTable GetDataByNamHoc_HocKy(NamHoc namHoc)
         {
-            if(thuNganDAL.DataSet.Tables.Contains("tblTHUNGAN_NH"))
-            {
+            if (thuNganDAL.DataSet.Tables.Contains("tblTHUNGAN_NH"))            
                 thuNganDAL.DataSet.Tables["tblTHUNGAN_NH"].Clear();
-            }
+            
             return thuNganDAL.GetDataSetByNamHoc_HocKy(namHoc).Tables["tblTHUNGAN_NH"];
         }        
 
@@ -33,9 +32,9 @@ namespace BLL
             return thuNganDAL.Update(tn);
         }
 
-        public void Destroy()
+        public void Cancel()
         {
-            thuNganDAL.Destroy();
+            thuNganDAL.Cancel();
         }
 
         public void Save()

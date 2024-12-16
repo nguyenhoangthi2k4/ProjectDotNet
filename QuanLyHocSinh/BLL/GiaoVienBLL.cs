@@ -18,6 +18,11 @@ namespace BLL
             return giaoVienDAL.GetDataSet().Tables["tblGIAOVIEN"];
         }
 
+        public DataTable GetData(string MaGV)
+        {
+            return giaoVienDAL.GetTableByMaGV(MaGV);
+        }
+
         public bool CheckInput(GiaoVien giaoVien)
         {
             if (giaoVien.MaGV == "" || giaoVien.MaGV.Length != 5 || giaoVien.TenGV == "" || giaoVien.SoDT == "" || giaoVien.SoDT.Length != 10 || giaoVien.MonGD == "" || giaoVien.Email == "" || giaoVien.QueQuan == "" || giaoVien.GioiTinh == null)
@@ -40,9 +45,9 @@ namespace BLL
             return giaoVienDAL.Update(giaoVien);
         }
 
-        public void Destroy()
+        public void Cancel()
         {
-            giaoVienDAL.Destroy();
+            giaoVienDAL.Cancel();
         }
 
         public void Save()

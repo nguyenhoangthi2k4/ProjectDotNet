@@ -21,6 +21,7 @@ namespace BLL
         {
             return namHocDAL.GetDataMaNH();
         }
+
         public bool CheckInput(NamHoc namHoc)
         {
             if(namHoc.MaNH == "" ||  namHoc.MaNH.Length != 5 || namHoc.MaHK == null)

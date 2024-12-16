@@ -51,14 +51,13 @@
             this.lblMonGD = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.lblHoTen = new System.Windows.Forms.Label();
-            this.btnXoa = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.mtxtSoDT = new System.Windows.Forms.MaskedTextBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.mtxtSoDT = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +67,7 @@
             this.txtMaSo.Location = new System.Drawing.Point(126, 112);
             this.txtMaSo.Name = "txtMaSo";
             this.txtMaSo.Size = new System.Drawing.Size(139, 30);
-            this.txtMaSo.TabIndex = 8;
+            this.txtMaSo.TabIndex = 0;
             this.toolTipMaGV.SetToolTip(this.txtMaSo, "Mã Giao viên phải có 5 kí tự");
             // 
             // lblDanhSachGV
@@ -107,7 +106,7 @@
             this.cbGioiTinh.Location = new System.Drawing.Point(126, 148);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(139, 33);
-            this.cbGioiTinh.TabIndex = 14;
+            this.cbGioiTinh.TabIndex = 1;
             // 
             // dtpNgaySinh
             // 
@@ -116,7 +115,7 @@
             this.dtpNgaySinh.Location = new System.Drawing.Point(810, 149);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(176, 30);
-            this.dtpNgaySinh.TabIndex = 15;
+            this.dtpNgaySinh.TabIndex = 5;
             // 
             // txtNgaySinh
             // 
@@ -167,7 +166,7 @@
             this.cbToGV.Location = new System.Drawing.Point(810, 112);
             this.cbToGV.Name = "cbToGV";
             this.cbToGV.Size = new System.Drawing.Size(176, 33);
-            this.cbToGV.TabIndex = 16;
+            this.cbToGV.TabIndex = 4;
             // 
             // txtQueQuan
             // 
@@ -175,7 +174,7 @@
             this.txtQueQuan.Location = new System.Drawing.Point(387, 148);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(288, 30);
-            this.txtQueQuan.TabIndex = 30;
+            this.txtQueQuan.TabIndex = 3;
             // 
             // lblQueQuan
             // 
@@ -193,7 +192,7 @@
             this.txtEmail.Location = new System.Drawing.Point(753, 188);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(482, 30);
-            this.txtEmail.TabIndex = 31;
+            this.txtEmail.TabIndex = 8;
             // 
             // lblEmail
             // 
@@ -221,7 +220,7 @@
             this.txtMonGD.Location = new System.Drawing.Point(1089, 112);
             this.txtMonGD.Name = "txtMonGD";
             this.txtMonGD.Size = new System.Drawing.Size(146, 30);
-            this.txtMonGD.TabIndex = 25;
+            this.txtMonGD.TabIndex = 6;
             // 
             // lblMonGD
             // 
@@ -239,7 +238,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(365, 112);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(310, 30);
-            this.txtHoTen.TabIndex = 29;
+            this.txtHoTen.TabIndex = 2;
             // 
             // lblHoTen
             // 
@@ -251,89 +250,25 @@
             this.lblHoTen.TabIndex = 23;
             this.lblHoTen.Text = "Họ tên:";
             // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.White;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(768, 570);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(148, 46);
-            this.btnXoa.TabIndex = 34;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.White;
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(1076, 570);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(147, 46);
-            this.btnLuu.TabIndex = 35;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.White;
-            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuy.Location = new System.Drawing.Point(922, 570);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(148, 46);
-            this.btnHuy.TabIndex = 36;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnThemMoi
-            // 
-            this.btnThemMoi.BackColor = System.Drawing.Color.White;
-            this.btnThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemMoi.Location = new System.Drawing.Point(459, 570);
-            this.btnThemMoi.Name = "btnThemMoi";
-            this.btnThemMoi.Size = new System.Drawing.Size(148, 46);
-            this.btnThemMoi.TabIndex = 32;
-            this.btnThemMoi.Text = "Thêm";
-            this.btnThemMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThemMoi.UseVisualStyleBackColor = false;
-            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.White;
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(614, 570);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(148, 46);
-            this.btnSua.TabIndex = 33;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(34, 576);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(231, 30);
-            this.txtTimKiem.TabIndex = 30;
+            this.txtTimKiem.TabIndex = 13;
             // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiem.Location = new System.Drawing.Point(278, 570);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(148, 46);
-            this.btnTimKiem.TabIndex = 32;
+            this.btnTimKiem.TabIndex = 14;
             this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -344,8 +279,68 @@
             this.mtxtSoDT.Mask = "(99) 000-00000";
             this.mtxtSoDT.Name = "mtxtSoDT";
             this.mtxtSoDT.Size = new System.Drawing.Size(146, 30);
-            this.mtxtSoDT.TabIndex = 37;
+            this.mtxtSoDT.TabIndex = 7;
             this.mtxtSoDT.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Image = global::QuanLyHocSinh.Properties.Resources.diskette;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.Location = new System.Drawing.Point(1076, 570);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(147, 46);
+            this.btnLuu.TabIndex = 12;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Image = global::QuanLyHocSinh.Properties.Resources.cancel;
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnHuy.Location = new System.Drawing.Point(922, 570);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(148, 46);
+            this.btnHuy.TabIndex = 11;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnThemMoi
+            // 
+            this.btnThemMoi.BackColor = System.Drawing.Color.White;
+            this.btnThemMoi.FlatAppearance.BorderSize = 0;
+            this.btnThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemMoi.Image = global::QuanLyHocSinh.Properties.Resources.add_group;
+            this.btnThemMoi.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnThemMoi.Location = new System.Drawing.Point(613, 570);
+            this.btnThemMoi.Name = "btnThemMoi";
+            this.btnThemMoi.Size = new System.Drawing.Size(148, 46);
+            this.btnThemMoi.TabIndex = 9;
+            this.btnThemMoi.Text = "Thêm";
+            this.btnThemMoi.UseVisualStyleBackColor = false;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.White;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Image = global::QuanLyHocSinh.Properties.Resources.account_maintenance;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.Location = new System.Drawing.Point(768, 570);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(148, 46);
+            this.btnSua.TabIndex = 10;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // frmQuanLyGV
             // 
@@ -354,7 +349,6 @@
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(1265, 644);
             this.Controls.Add(this.mtxtSoDT);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnTimKiem);
@@ -413,7 +407,6 @@
         private System.Windows.Forms.Label lblMonGD;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label lblHoTen;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnThemMoi;

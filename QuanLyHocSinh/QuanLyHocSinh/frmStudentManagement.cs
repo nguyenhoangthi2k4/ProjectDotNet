@@ -13,15 +13,16 @@ namespace QuanLyHocSinh
     public partial class frmStudentManagement : Form
     {
         private Form _currentForm = null;
-        private string _maGV;
-        public string MaGV { get => _maGV; set => _maGV = value; }
+        private string _maLop;
 
-        public frmStudentManagement(string maGV)
+        public string MaLop { get => _maLop; set => _maLop = value; }
+
+        public frmStudentManagement(string maLop)
         {
             InitializeComponent();
 
-            MaGV = maGV;
-            this.SwitchFrom(new frmQuanLy(MaGV));
+            MaLop = maLop;
+            this.SwitchFrom(new frmQuanLy(maLop));
         }
 
         public void SwitchFrom(Form childForm)
@@ -36,7 +37,7 @@ namespace QuanLyHocSinh
             // Thêm childForm vào pnContainer
             pnContainer.Controls.Clear();
             pnContainer.Controls.Add(childForm);
-            
+
             childForm.Show();
             this._currentForm = childForm;
         }
@@ -53,32 +54,23 @@ namespace QuanLyHocSinh
 
         private void tsMnItemQuanLy_Click(object sender, EventArgs e)
         {
-            this.SwitchFrom(new frmQuanLy(MaGV));
+            this.SwitchFrom(new frmQuanLy(MaLop));
         }
 
         private void tsMnItemDanhGia_Click(object sender, EventArgs e)
         {
-            this.SwitchFrom(new frmDanhGiaHanhKiem());
-        }
-
-        private void tsMnItemThuNgan_Click(object sender, EventArgs e)
-        {
-            this.SwitchFrom(new frmQuanLyTN());
-        }
-
-        private void tsMnuItemPhuHuynh_Click(object sender, EventArgs e)
-        {
-            this.SwitchFrom(new frmPhuHuynh());
-        }
-
-        private void tsMuItemTTCN_Click(object sender, EventArgs e)
-        {
-            this.SwitchFrom(new frmThongTinCaNhanGV(this));
+            this.SwitchFrom(new frmDanhGiaHanhKiem(MaLop));
         }
 
         private void tsMnItemDiemSo_Click(object sender, EventArgs e)
         {
-            this.SwitchFrom(new frmDiemSo(MaGV));
+            this.SwitchFrom(new frmDiemSo(MaLop));
+        }
+
+        private void tsMnuItemDangXuat_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
+

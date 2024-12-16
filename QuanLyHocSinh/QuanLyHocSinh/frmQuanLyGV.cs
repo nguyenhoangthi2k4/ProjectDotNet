@@ -133,14 +133,9 @@ namespace QuanLyHocSinh
             }  
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            giaoVienBLL.Destroy();
+            giaoVienBLL.Cancel();
 
             this.dgvDanhSach.ClearSelection();
             this.txtMaSo.ReadOnly = false;

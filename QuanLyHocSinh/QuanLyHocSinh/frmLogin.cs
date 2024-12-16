@@ -19,8 +19,6 @@ namespace QuanLyHocSinh
         public frmLogin()
         {
             InitializeComponent();
-            this.txtUsername.Text = "admin";
-            this.txtPassword.Text = "admin";
         }
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -29,19 +27,20 @@ namespace QuanLyHocSinh
             else
                 e.Cancel = true;
         }
+       
         private void btnLogin_Click(object sender, EventArgs e)
         {
             taiKhoan.Taikhoan = this.txtUsername.Text;
             taiKhoan.Matkhau = this.txtPassword.Text;
 
             string user = taiKhoanBLL.CheckLogin(taiKhoan);
-            if(user == "Lỗi kết nối")
+            if (user == "Lỗi kết nối")
             {
                 MessageBox.Show("Lỗi kết nối cơ sở dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if(user == "Tài khoản không hợp lệ")
+            if (user == "Tài khoản không hợp lệ")
             {
                 MessageBox.Show("Tài khoản không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -58,45 +57,15 @@ namespace QuanLyHocSinh
             else if (DangNhap[1] == "GV")
             {
                 this.Hide();
-                frmStudentManagement frmStudentManagement = new frmStudentManagement(DangNhap[0]);
-                frmStudentManagement.ShowDialog();
+                frmThongTinGV frmThongTin = new frmThongTinGV(DangNhap[0]);
+                frmThongTin.ShowDialog();
                 this.Show();
             }
-            else
-            {
-                MessageBox.Show("Tài khoản hợp lệ!");
-            }
-
-            //string[] DangNhap = taiKhoanBLL.Login(taiKhoan);
-
-            //if (DangNhap[0] != "Tài khoản không hợp lệ")
-            //{
-            //    if (taiKhoanBLL.Login(taiKhoan)[1] == "AD")
-            //    {
-            //        this.Hide();
-            //        frmAdmin frmAdmin = new frmAdmin();
-            //        frmAdmin.ShowDialog();
-            //        this.Show();
-            //    }
-            //    else if(DangNhap[1] == "GV")
-            //    {
-            //        this.Hide();
-            //        frmStudentManagement frmStudentManagement = new frmStudentManagement();
-            //        frmStudentManagement.ShowDialog();
-            //        this.Show();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Tài khoản hợp lệ!" );
-            //    }                        
-            //}
-            //else
-            //    MessageBox.Show("Tài khoản không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            this.txtUsername.Text = string.Empty;            
+            this.txtUsername.Text = string.Empty;
             this.txtPassword.Text = string.Empty;
             this.txtUsername.Focus();
-        }       
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

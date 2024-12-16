@@ -43,7 +43,6 @@ namespace DAL
             _daHanhKiem = new SqlDataAdapter(strSQLHanhKiem, Conn);
             _daHanhKiem.Fill(DataSet, "tblHANHKIEM");
 
-
             SqlCommandBuilder commandBuilder = new SqlCommandBuilder(_da);
             SqlCommandBuilder commandBuilderTK = new SqlCommandBuilder(_daTk);
             SqlCommandBuilder sqlCommandBuilderLopHoc = new SqlCommandBuilder(_daLopHoc);
@@ -57,10 +56,10 @@ namespace DAL
             return GetDataSet(_da, "tblHOCSINH");
         }
 
-        public DataSet GetDataSet(string Malop)
+        public DataSet GetDataSetByMaLop(string Malop)
         {
             SqlDataAdapter _daHS_LopHoc = new SqlDataAdapter($"SELECT * FROM HOCSINH WHERE MALOP = '{Malop}'", Conn);
-            return GetDataSet(_daHS_LopHoc, "tblHOCSINH_MALOP");
+            return GetDataSet(_daHS_LopHoc, "tblHOCSINH_ByMaLop");
         }
 
         public bool CheckPrimary(HocSinh hs)
@@ -183,30 +182,45 @@ namespace DAL
 
         public string Update(HocSinh hs)
         {
-            DataRow dr = DataSet.Tables["tblHOCSINH"].Select($"MAHS = '{hs.MaHS}'")[0];            
-            dr["HOTEN"] = hs.HoTen;
-            dr["NGAYSINH"] = hs.NgaySinh;
-            dr["GIOITINH"] = hs.GioiTinh;
-            dr["DIACHI"] = hs.DiaChi;
-            dr["SODT"] = hs.SoDT;            
-            
-            string currentClass = dr["MALOP"].ToString();
-            if (currentClass != hs.MaLop)
-            {
-                // Cập nhật sĩ số lớp cũ                
-                DataRow rowOldClass = DataSet.Tables["tblLOPHOC"].Select($"MALOP = '{currentClass}'")[0];
-                rowOldClass["SISO"] = int.Parse(rowOldClass["SISO"].ToString()) - 1;                
+            DataRow dr = DataSet.Tables["tblHOCSINH"].Select($"MAHS = '{hs.MaHS}'")[0];
+            string MaLop_Old = dr["MALOP"].ToString(); // Malop hiện tại
 
-                // Cập nhật sĩ số lớp mới
-                DataRow rowNewClass = DataSet.Tables["tblLOPHOC"].Select($"MALOP = '{hs.MaLop}'")[0];
-                rowNewClass["SISO"] = int.Parse(rowNewClass["SISO"].ToString()) + 1;                
-            }
-            dr["MALOP"] = hs.MaLop;
+            DataRow rowNH_Old = DataSet.Tables["tblLOPHOC"].Select($"MALOP = '{MaLop_Old}'")[0];
+            string MaNH_Old = rowNH_Old["MANH"].ToString(); // MaNH hiện tại
+
+            DataRow rowNH_New = DataSet.Tables["tblLOPHOC"].Select($"MALOP = '{hs.MaLop}'")[0];
+            string MaNH_New = rowNH_New["MANH"].ToString(); // MaNH mới
+
+            // Cập nhật khi chuyển lớp trong cùng năm học
+            if (MaNH_Old != MaNH_New)
+                return "Không thể chuyển lớp khác năm học";
+            else
+            {
+                // Cập nhật thông tin bình thường
+                dr["HOTEN"] = hs.HoTen;
+                dr["NGAYSINH"] = hs.NgaySinh;
+                dr["GIOITINH"] = hs.GioiTinh;
+                dr["DIACHI"] = hs.DiaChi;
+                dr["SODT"] = hs.SoDT;
+
+                if (MaLop_Old != hs.MaLop)
+                {
+                    // Cập nhật sĩ số lớp cũ                
+                    DataRow rowOldClass = DataSet.Tables["tblLOPHOC"].Select($"MALOP = '{MaLop_Old}'")[0];
+                    rowOldClass["SISO"] = int.Parse(rowOldClass["SISO"].ToString()) - 1;
+
+                    // Cập nhật sĩ số lớp mới
+                    DataRow rowNewClass = DataSet.Tables["tblLOPHOC"].Select($"MALOP = '{hs.MaLop}'")[0];
+                    rowNewClass["SISO"] = int.Parse(rowNewClass["SISO"].ToString()) + 1;
+
+                }
+                dr["MALOP"] = hs.MaLop; // MaLop mới
+            }  
 
             return "Sửa thành công";
         }
 
-        public void Destroy()
+        public void Cancel()
         {
             DataSet.Tables["tblHOCSINH"].RejectChanges();
         }

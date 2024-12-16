@@ -46,6 +46,28 @@ namespace DAL
             return GetDataSet(_da, "tblLOPHOC");
         }
 
+        // Get data by MaLop
+        public DataTable GetTableByMaLop(string MaLop)
+        {
+            DataTable dt = new DataTable();
+            using (SqlDataAdapter da = new SqlDataAdapter($"SELECT * FROM LOPHOC WHERE MALOP = '{MaLop}'", Conn))
+            {
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        // Get data by GVCN
+        public DataTable GetTableByGVCN(string GVCN)
+        {
+            DataTable dt = new DataTable();
+            using(SqlDataAdapter da = new SqlDataAdapter($"SELECT * FROM LOPHOC WHERE GVCN = '{GVCN}'", Conn))
+            {
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
         public bool CheckPrimary(LopHoc lopHoc)
         {
             DataTable dt = DataSet.Tables["tblLOPHOC"];
@@ -118,7 +140,7 @@ namespace DAL
             return "Sửa thành công";
         }
 
-        public void Destroy()
+        public void Cancel()
         {
             DataSet.Tables["tblLOPHOC"].RejectChanges();
         }

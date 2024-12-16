@@ -12,37 +12,40 @@ namespace QuanLyHocSinh
 {
     public partial class frmQuanLy : Form
     {
-        private string _maGV;
-        LopHocBLL lopHocBLL = new LopHocBLL();
-        HocSinhBLL hocSinhBLL = new HocSinhBLL();
-        DataTable dtLH;
-        DataTable dtHS;
+        private string _maLop;
+        HocSinhBLL hocSinhBLL = new HocSinhBLL();  
+        LopHocBLL LopHocBLL = new LopHocBLL();
+        DataTable dtHS = new DataTable();
 
-        public frmQuanLy(string maGV)
+        public string MaLop { get => _maLop; set => _maLop = value; }
+
+        public frmQuanLy(string maLop)
         {
             InitializeComponent();
 
-            MaGV = maGV;
-            dtLH = lopHocBLL.GetData();
-            string maLop = dtLH.Select($"GVCN = '{maGV}' AND MANH = 'N2021' AND MAHK = '1'")[0]["MALOP"].ToString();
-            dtHS = hocSinhBLL.GetDataByMaLop(maLop);
+            MaLop = maLop;
 
+            // Load thông tin học sinh
+            dtHS = hocSinhBLL.GetDataByMaLop(MaLop);
             this.dgvDanhSach.DataSource = dtHS;
             this.dgvDanhSach.Columns["MAHS"].HeaderText = "Mã học sinh";
             this.dgvDanhSach.Columns["HOTEN"].HeaderText = "Họ tên";
             this.dgvDanhSach.Columns["NGAYSINH"].HeaderText = "Ngày sinh";
             this.dgvDanhSach.Columns["DIACHI"].HeaderText = "Địa chỉ";
             this.dgvDanhSach.Columns["SODT"].HeaderText = "Số điện thoại";
-            this.dgvDanhSach.Columns["MAPH"].Visible = false;
             this.dgvDanhSach.Columns["GIOITINH"].HeaderText = "Giới tính";
             this.dgvDanhSach.Columns["MALOP"].Visible = false;
             this.dgvDanhSach.Columns["USERNAME"].Visible = false;
 
-            this.txtNamHoc.Text =dtLH.Select($"GVCN = '{maGV}' AND MANH = 'N2021' AND MAHK = '1'")[0]["MANH"].ToString();
-            this.lblLop.Text = dtLH.Select($"GVCN = '{maGV}' AND MANH = 'N2021' AND MAHK = '1'")[0]["TENLOP"].ToString();
+            // Get tên lớp
+            DataTable lopHoc = LopHocBLL.GetDataByMaLop(MaLop);
+            this.lblLop.Text = lopHoc.Rows[0]["TENLOP"].ToString();
+
+            this.txtNamHoc.ReadOnly = true;
+            this.txtNamHoc.BackColor = Color.LightGray;
+            this.txtNamHoc.Text = lopHoc.Rows[0]["MANH"].ToString();
         }
 
-        public string MaGV { get => _maGV; set => _maGV = value; }
 
         private void dgvDanhSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -61,9 +64,10 @@ namespace QuanLyHocSinh
         {
             if(this.txtTimKiem.Text != "")
             {
-                DataRow findRow = dtHS.Select($"HOTEN = '{this.txtTimKiem.Text}'")[0];
-                if(findRow != null)
+                DataRow[] findRows = dtHS.Select($"HOTEN = '{this.txtTimKiem.Text}'");
+                if(findRows.Length > 0)
                 {
+                    DataRow findRow = findRows[0];
                     this.dgvDanhSach.Rows[dtHS.Rows.IndexOf(findRow)].Selected = true;
                     this.dgvDanhSach_CellContentClick(null, null);
                     this.dgvDanhSach.ClearSelection();

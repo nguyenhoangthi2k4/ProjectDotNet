@@ -55,7 +55,7 @@
             this.cbQuyen.Location = new System.Drawing.Point(821, 124);
             this.cbQuyen.Name = "cbQuyen";
             this.cbQuyen.Size = new System.Drawing.Size(148, 33);
-            this.cbQuyen.TabIndex = 15;
+            this.cbQuyen.TabIndex = 2;
             // 
             // txtMatKhau
             // 
@@ -63,7 +63,7 @@
             this.txtMatKhau.Location = new System.Drawing.Point(524, 124);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(140, 30);
-            this.txtMatKhau.TabIndex = 12;
+            this.txtMatKhau.TabIndex = 1;
             // 
             // txtTenDN
             // 
@@ -71,7 +71,7 @@
             this.txtTenDN.Location = new System.Drawing.Point(190, 124);
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(167, 30);
-            this.txtTenDN.TabIndex = 13;
+            this.txtTenDN.TabIndex = 0;
             // 
             // lblQuyen
             // 
@@ -116,42 +116,51 @@
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Image = global::QuanLyHocSinh.Properties.Resources.diskette;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.Location = new System.Drawing.Point(1083, 568);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(147, 46);
-            this.btnLuu.TabIndex = 26;
+            this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Image = global::QuanLyHocSinh.Properties.Resources.cancel;
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.Location = new System.Drawing.Point(907, 568);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(147, 46);
-            this.btnHuy.TabIndex = 22;
+            this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.White;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Image = global::QuanLyHocSinh.Properties.Resources.account_maintenance;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.Location = new System.Drawing.Point(731, 568);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(147, 46);
-            this.btnSua.TabIndex = 23;
+            this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 

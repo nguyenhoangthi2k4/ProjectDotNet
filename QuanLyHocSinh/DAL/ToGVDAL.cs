@@ -88,7 +88,7 @@ namespace DAL
             return "Sửa Thành công";
         }
 
-        public void Destroy()
+        public void Cancel()
         {
             DataSet.Tables["tblTOGV"].RejectChanges();
         }

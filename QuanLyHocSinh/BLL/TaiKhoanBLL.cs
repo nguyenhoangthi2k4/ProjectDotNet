@@ -47,7 +47,7 @@ namespace BLL
 
         public void Destroy()
         {
-            taiKhoanDAL.Destroy();
+            taiKhoanDAL.Cancel();
         }
 
         public void Save()

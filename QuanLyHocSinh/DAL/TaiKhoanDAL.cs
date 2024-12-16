@@ -34,7 +34,7 @@ namespace DAL
             return "Sửa thành công";
         }
 
-        public void Destroy()
+        public void Cancel()
         {
             DataSet.Tables["tblLOGIN_TABLE"].RejectChanges();
         }
@@ -81,6 +81,5 @@ namespace DAL
             }
             return user;
         }
-
     }
 }

@@ -38,9 +38,9 @@ namespace BLL
             return ToGVDAL.Update(toGV);
         }
 
-        public void Destroy()
+        public void Cancel()
         {
-            ToGVDAL.Destroy();
+            ToGVDAL.Cancel();
         }
 
         public void Save()

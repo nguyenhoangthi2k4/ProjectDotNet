@@ -50,7 +50,7 @@
             this.txtMaToGV.Location = new System.Drawing.Point(103, 120);
             this.txtMaToGV.Name = "txtMaToGV";
             this.txtMaToGV.Size = new System.Drawing.Size(184, 30);
-            this.txtMaToGV.TabIndex = 8;
+            this.txtMaToGV.TabIndex = 0;
             // 
             // cbTruongTo
             // 
@@ -63,7 +63,7 @@
             this.cbTruongTo.MaxDropDownItems = 5;
             this.cbTruongTo.Name = "cbTruongTo";
             this.cbTruongTo.Size = new System.Drawing.Size(228, 33);
-            this.cbTruongTo.TabIndex = 14;
+            this.cbTruongTo.TabIndex = 2;
             // 
             // txtTenTo
             // 
@@ -72,7 +72,7 @@
             this.txtTenTo.Location = new System.Drawing.Point(413, 120);
             this.txtTenTo.Name = "txtTenTo";
             this.txtTenTo.Size = new System.Drawing.Size(218, 30);
-            this.txtTenTo.TabIndex = 8;
+            this.txtTenTo.TabIndex = 1;
             // 
             // lblTenTo
             // 
@@ -132,56 +132,68 @@
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Image = global::QuanLyHocSinh.Properties.Resources.diskette;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.Location = new System.Drawing.Point(1081, 567);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(147, 46);
-            this.btnLuu.TabIndex = 26;
+            this.btnLuu.TabIndex = 6;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Image = global::QuanLyHocSinh.Properties.Resources.cancel;
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.Location = new System.Drawing.Point(905, 567);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(147, 46);
-            this.btnHuy.TabIndex = 22;
+            this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.White;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Image = global::QuanLyHocSinh.Properties.Resources.account_maintenance;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.Location = new System.Drawing.Point(729, 567);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(147, 46);
-            this.btnSua.TabIndex = 23;
+            this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Image = global::QuanLyHocSinh.Properties.Resources.plus;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.Location = new System.Drawing.Point(553, 567);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(147, 46);
-            this.btnThem.TabIndex = 24;
+            this.btnThem.TabIndex = 3;
             this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 

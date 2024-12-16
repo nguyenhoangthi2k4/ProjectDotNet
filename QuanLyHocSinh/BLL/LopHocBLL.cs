@@ -18,6 +18,18 @@ namespace BLL
             return lopHocDAL.GetDataSet().Tables["tblLOPHOC"];
         }
 
+        // get classes by GVCV
+        public DataTable GetDataByGVCV(string GVCN)
+        {
+            return lopHocDAL.GetTableByGVCN(GVCN);
+        }
+
+        // get info by MaLop
+        public DataTable GetDataByMaLop(string MaLop)
+        {
+            return lopHocDAL.GetTableByMaLop(MaLop);
+        }
+
         public bool CheckInput(LopHoc lopHoc)
         {
             if (lopHoc.MaLop == "" || lopHoc.MaLop.Length != 5 || lopHoc.TenLop == "" || lopHoc.MaNH == null || lopHoc.Gvcn == null)
@@ -40,9 +52,9 @@ namespace BLL
             return lopHocDAL.Update(lopHoc);
         }
 
-        public void Destroy()
+        public void Cancel()
         {
-            lopHocDAL.Destroy();
+            lopHocDAL.Cancel();
         }
 
         public void Save()

@@ -62,7 +62,7 @@
             this.cbMaNH.Location = new System.Drawing.Point(171, 120);
             this.cbMaNH.Name = "cbMaNH";
             this.cbMaNH.Size = new System.Drawing.Size(151, 33);
-            this.cbMaNH.TabIndex = 16;
+            this.cbMaNH.TabIndex = 0;
             // 
             // dgvLopHoc
             // 
@@ -89,7 +89,7 @@
             this.cbGVCN.Location = new System.Drawing.Point(1026, 120);
             this.cbGVCN.Name = "cbGVCN";
             this.cbGVCN.Size = new System.Drawing.Size(201, 33);
-            this.cbGVCN.TabIndex = 17;
+            this.cbGVCN.TabIndex = 4;
             // 
             // txtMaLop
             // 
@@ -97,7 +97,7 @@
             this.txtMaLop.Location = new System.Drawing.Point(439, 120);
             this.txtMaLop.Name = "txtMaLop";
             this.txtMaLop.Size = new System.Drawing.Size(183, 30);
-            this.txtMaLop.TabIndex = 10;
+            this.txtMaLop.TabIndex = 2;
             // 
             // lblMaNH
             // 
@@ -125,7 +125,7 @@
             this.txtTenLop.Location = new System.Drawing.Point(739, 120);
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(183, 30);
-            this.txtTenLop.TabIndex = 13;
+            this.txtTenLop.TabIndex = 3;
             // 
             // lblMaLop
             // 
@@ -134,7 +134,7 @@
             this.lblMaLop.Location = new System.Drawing.Point(349, 123);
             this.lblMaLop.Name = "lblMaLop";
             this.lblMaLop.Size = new System.Drawing.Size(84, 25);
-            this.lblMaLop.TabIndex = 14;
+            this.lblMaLop.TabIndex = 1;
             this.lblMaLop.Text = "Mã Lớp:";
             // 
             // lblGVCN
@@ -150,56 +150,68 @@
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Image = global::QuanLyHocSinh.Properties.Resources.diskette;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.Location = new System.Drawing.Point(1080, 563);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(147, 46);
-            this.btnLuu.TabIndex = 21;
+            this.btnLuu.TabIndex = 8;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.White;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Image = global::QuanLyHocSinh.Properties.Resources.plus;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.Location = new System.Drawing.Point(552, 563);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(147, 46);
-            this.btnThem.TabIndex = 20;
+            this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.White;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Image = global::QuanLyHocSinh.Properties.Resources.account_maintenance;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.Location = new System.Drawing.Point(728, 563);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(147, 46);
-            this.btnSua.TabIndex = 20;
+            this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Sửa";
-            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Image = global::QuanLyHocSinh.Properties.Resources.cancel;
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.Location = new System.Drawing.Point(904, 563);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(147, 46);
-            this.btnHuy.TabIndex = 20;
+            this.btnHuy.TabIndex = 7;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 

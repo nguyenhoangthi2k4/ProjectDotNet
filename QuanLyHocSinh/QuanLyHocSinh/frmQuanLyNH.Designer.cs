@@ -110,28 +110,34 @@
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Image = global::QuanLyHocSinh.Properties.Resources.diskette;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.Location = new System.Drawing.Point(817, 114);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(147, 46);
             this.btnLuu.TabIndex = 4;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThemMoi
             // 
             this.btnThemMoi.BackColor = System.Drawing.SystemColors.Control;
+            this.btnThemMoi.FlatAppearance.BorderSize = 0;
+            this.btnThemMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemMoi.Image = global::QuanLyHocSinh.Properties.Resources.plus;
+            this.btnThemMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemMoi.Location = new System.Drawing.Point(645, 114);
             this.btnThemMoi.Name = "btnThemMoi";
             this.btnThemMoi.Size = new System.Drawing.Size(147, 46);
             this.btnThemMoi.TabIndex = 3;
             this.btnThemMoi.Text = "Thêm";
-            this.btnThemMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThemMoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThemMoi.UseVisualStyleBackColor = false;
             this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 

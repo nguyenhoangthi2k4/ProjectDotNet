@@ -66,7 +66,7 @@
             this.dtpNgayDongBHYT.Location = new System.Drawing.Point(982, 148);
             this.dtpNgayDongBHYT.Name = "dtpNgayDongBHYT";
             this.dtpNgayDongBHYT.Size = new System.Drawing.Size(175, 30);
-            this.dtpNgayDongBHYT.TabIndex = 40;
+            this.dtpNgayDongBHYT.TabIndex = 8;
             // 
             // dtpNgayDongHP
             // 
@@ -75,7 +75,7 @@
             this.dtpNgayDongHP.Location = new System.Drawing.Point(982, 109);
             this.dtpNgayDongHP.Name = "dtpNgayDongHP";
             this.dtpNgayDongHP.Size = new System.Drawing.Size(175, 30);
-            this.dtpNgayDongHP.TabIndex = 41;
+            this.dtpNgayDongHP.TabIndex = 7;
             // 
             // cbTTBHYT
             // 
@@ -87,7 +87,7 @@
             this.cbTTBHYT.Location = new System.Drawing.Point(739, 148);
             this.cbTTBHYT.Name = "cbTTBHYT";
             this.cbTTBHYT.Size = new System.Drawing.Size(200, 33);
-            this.cbTTBHYT.TabIndex = 38;
+            this.cbTTBHYT.TabIndex = 6;
             // 
             // cbTTHP
             // 
@@ -99,7 +99,7 @@
             this.cbTTHP.Location = new System.Drawing.Point(739, 106);
             this.cbTTHP.Name = "cbTTHP";
             this.cbTTHP.Size = new System.Drawing.Size(200, 33);
-            this.cbTTHP.TabIndex = 39;
+            this.cbTTHP.TabIndex = 5;
             // 
             // txtBHYT
             // 
@@ -107,7 +107,7 @@
             this.txtBHYT.Location = new System.Drawing.Point(442, 151);
             this.txtBHYT.Name = "txtBHYT";
             this.txtBHYT.Size = new System.Drawing.Size(168, 30);
-            this.txtBHYT.TabIndex = 36;
+            this.txtBHYT.TabIndex = 4;
             // 
             // txtHocPhi
             // 
@@ -115,7 +115,7 @@
             this.txtHocPhi.Location = new System.Drawing.Point(442, 111);
             this.txtHocPhi.Name = "txtHocPhi";
             this.txtHocPhi.Size = new System.Drawing.Size(168, 30);
-            this.txtHocPhi.TabIndex = 37;
+            this.txtHocPhi.TabIndex = 3;
             // 
             // lblHocPhi
             // 
@@ -170,7 +170,7 @@
             this.dgvDanhSachTN.RowTemplate.Height = 28;
             this.dgvDanhSachTN.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSachTN.Size = new System.Drawing.Size(1174, 327);
-            this.dgvDanhSachTN.TabIndex = 24;
+            this.dgvDanhSachTN.TabIndex = 50;
             this.dgvDanhSachTN.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachTN_CellContentClick);
             // 
             // lblThuNgan
@@ -199,44 +199,51 @@
             this.txtMaSo.Location = new System.Drawing.Point(105, 112);
             this.txtMaSo.Name = "txtMaSo";
             this.txtMaSo.Size = new System.Drawing.Size(224, 30);
-            this.txtMaSo.TabIndex = 31;
+            this.txtMaSo.TabIndex = 1;
             // 
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.White;
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Image = global::QuanLyHocSinh.Properties.Resources.diskette;
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.Location = new System.Drawing.Point(1090, 564);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(147, 46);
-            this.btnLuu.TabIndex = 49;
+            this.btnLuu.TabIndex = 11;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.Color.White;
-            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Image = global::QuanLyHocSinh.Properties.Resources.cancel;
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.Location = new System.Drawing.Point(936, 564);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(148, 46);
-            this.btnHuy.TabIndex = 50;
+            this.btnHuy.TabIndex = 10;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiem.Location = new System.Drawing.Point(292, 564);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(148, 46);
-            this.btnTimKiem.TabIndex = 45;
+            this.btnTimKiem.TabIndex = 13;
             this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
@@ -246,18 +253,21 @@
             this.txtTimKiem.Location = new System.Drawing.Point(48, 570);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(231, 30);
-            this.txtTimKiem.TabIndex = 44;
+            this.txtTimKiem.TabIndex = 12;
             // 
             // btnThayDoi
             // 
             this.btnThayDoi.BackColor = System.Drawing.Color.White;
-            this.btnThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThayDoi.FlatAppearance.BorderSize = 0;
+            this.btnThayDoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThayDoi.Image = global::QuanLyHocSinh.Properties.Resources.account_maintenance;
+            this.btnThayDoi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThayDoi.Location = new System.Drawing.Point(782, 564);
             this.btnThayDoi.Name = "btnThayDoi";
             this.btnThayDoi.Size = new System.Drawing.Size(148, 46);
-            this.btnThayDoi.TabIndex = 48;
+            this.btnThayDoi.TabIndex = 9;
             this.btnThayDoi.Text = "Thay đổi";
-            this.btnThayDoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThayDoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThayDoi.UseVisualStyleBackColor = false;
             this.btnThayDoi.Click += new System.EventHandler(this.btnThayDoi_Click);
             // 
@@ -273,7 +283,7 @@
             this.panel1.Location = new System.Drawing.Point(36, 199);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1201, 327);
-            this.panel1.TabIndex = 51;
+            this.panel1.TabIndex = 0;
             // 
             // cbHocKy
             // 
@@ -285,7 +295,7 @@
             this.cbHocKy.Location = new System.Drawing.Point(368, 19);
             this.cbHocKy.Name = "cbHocKy";
             this.cbHocKy.Size = new System.Drawing.Size(129, 33);
-            this.cbHocKy.TabIndex = 39;
+            this.cbHocKy.TabIndex = 2;
             // 
             // lblHocKy
             // 
@@ -304,16 +314,18 @@
             this.cbMaNH.Location = new System.Drawing.Point(132, 19);
             this.cbMaNH.Name = "cbMaNH";
             this.cbMaNH.Size = new System.Drawing.Size(129, 33);
-            this.cbMaNH.TabIndex = 39;
+            this.cbMaNH.TabIndex = 0;
             // 
             // btnLoc
             // 
             this.btnLoc.BackColor = System.Drawing.Color.White;
+            this.btnLoc.FlatAppearance.BorderSize = 0;
+            this.btnLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoc.Location = new System.Drawing.Point(579, 18);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(118, 37);
-            this.btnLoc.TabIndex = 45;
+            this.btnLoc.TabIndex = 3;
             this.btnLoc.Text = "Lọc";
             this.btnLoc.UseVisualStyleBackColor = false;
             this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
@@ -334,7 +346,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(105, 150);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(224, 30);
-            this.txtHoTen.TabIndex = 53;
+            this.txtHoTen.TabIndex = 2;
             // 
             // lblHoTen
             // 

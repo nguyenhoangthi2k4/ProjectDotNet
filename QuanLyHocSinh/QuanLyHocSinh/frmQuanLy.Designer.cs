@@ -55,7 +55,7 @@
             this.txtNamHoc.Location = new System.Drawing.Point(135, 117);
             this.txtNamHoc.Name = "txtNamHoc";
             this.txtNamHoc.Size = new System.Drawing.Size(129, 30);
-            this.txtNamHoc.TabIndex = 53;
+            this.txtNamHoc.TabIndex = 0;
             // 
             // lblNamHoc
             // 
@@ -74,7 +74,7 @@
             this.dtpNgaySinh.Location = new System.Drawing.Point(632, 164);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(129, 30);
-            this.dtpNgaySinh.TabIndex = 50;
+            this.dtpNgaySinh.TabIndex = 4;
             // 
             // cbGioiTinh
             // 
@@ -83,7 +83,7 @@
             this.cbGioiTinh.Location = new System.Drawing.Point(377, 161);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(130, 33);
-            this.cbGioiTinh.TabIndex = 49;
+            this.cbGioiTinh.TabIndex = 3;
             // 
             // txtHoTen
             // 
@@ -91,7 +91,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(377, 117);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(384, 30);
-            this.txtHoTen.TabIndex = 48;
+            this.txtHoTen.TabIndex = 2;
             // 
             // txtSoDT
             // 
@@ -99,7 +99,7 @@
             this.txtSoDT.Location = new System.Drawing.Point(932, 117);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(303, 30);
-            this.txtSoDT.TabIndex = 47;
+            this.txtSoDT.TabIndex = 5;
             // 
             // txtDiaChi
             // 
@@ -107,7 +107,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(866, 163);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(369, 30);
-            this.txtDiaChi.TabIndex = 46;
+            this.txtDiaChi.TabIndex = 6;
             // 
             // txtMaso
             // 
@@ -115,7 +115,7 @@
             this.txtMaso.Location = new System.Drawing.Point(135, 161);
             this.txtMaso.Name = "txtMaso";
             this.txtMaso.Size = new System.Drawing.Size(129, 30);
-            this.txtMaso.TabIndex = 45;
+            this.txtMaso.TabIndex = 1;
             // 
             // lblGioiTinh
             // 
@@ -205,11 +205,13 @@
             // btnTim
             // 
             this.btnTim.BackColor = System.Drawing.Color.White;
+            this.btnTim.FlatAppearance.BorderSize = 0;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.btnTim.Location = new System.Drawing.Point(278, 560);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(136, 44);
-            this.btnTim.TabIndex = 56;
+            this.btnTim.TabIndex = 8;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = false;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
@@ -220,7 +222,7 @@
             this.txtTimKiem.Location = new System.Drawing.Point(35, 567);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(222, 30);
-            this.txtTimKiem.TabIndex = 55;
+            this.txtTimKiem.TabIndex = 7;
             // 
             // frmQuanLy
             // 

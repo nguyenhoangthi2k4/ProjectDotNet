@@ -36,16 +36,6 @@ namespace QuanLyHocSinh
             this._currentForm = childForm;
         }
 
-        private void tsMnuItemDangXuat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void tsMnuItemDong_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void tsMnuItemQLHS_Click(object sender, EventArgs e)
         {
             this.SwitchFrom(new frmQuanLyHS());
@@ -79,6 +69,11 @@ namespace QuanLyHocSinh
         private void tsMnuItemQLTN_Click(object sender, EventArgs e)
         {
             this.SwitchFrom(new frmQuanLyTN());
+        }
+
+        private void tsMnuItemDangXuat_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
