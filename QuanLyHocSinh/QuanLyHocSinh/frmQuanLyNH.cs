@@ -15,9 +15,7 @@ namespace QuanLyHocSinh
     public partial class frmQuanLyNH : Form
     {
         NamHocBLL namHocBLL = new NamHocBLL();
-        LopHocBLL lopHocBLL = new LopHocBLL();        
-
-        private bool flagNH = false; // Không thay đổi dữ liệu bảng NAMHOC      
+        LopHocBLL lopHocBLL = new LopHocBLL();      
         public frmQuanLyNH()
         {
             InitializeComponent();
@@ -50,11 +48,7 @@ namespace QuanLyHocSinh
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
-            if (flagNH == true)
-            {
-                this.InsertNH();
-                flagNH = false;
-            }
+            this.InsertNH();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -66,17 +60,6 @@ namespace QuanLyHocSinh
             }
         }
 
-        private void txtNamHoc_TextChanged(object sender, EventArgs e)
-        {
-            if(txtNamHoc.Text != "")
-            {
-                flagNH = true;
-            }
-            else
-            {
-                flagNH = false;
-            }
-        }
         private void dgvDanhSachNH_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (this.dgvDanhSachNH.SelectedRows.Count > 0)

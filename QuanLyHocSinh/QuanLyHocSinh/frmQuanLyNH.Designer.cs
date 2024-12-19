@@ -68,7 +68,6 @@
             this.txtNamHoc.Size = new System.Drawing.Size(148, 30);
             this.txtNamHoc.TabIndex = 1;
             this.toolTipMaNH.SetToolTip(this.txtNamHoc, "Mã phải đủ 5 kí tự");
-            this.txtNamHoc.TextChanged += new System.EventHandler(this.txtNamHoc_TextChanged);
             // 
             // lblHocKy
             // 

@@ -150,18 +150,6 @@ ALTER TABLE HANHKIEM
 ADD CONSTRAINT FK_HANHKIEM_HOCSINH FOREIGN KEY(MAHS) REFERENCES HOCSINH(MAHS),
 	CONSTRAINT FK_HANHKIEM_NAMHOC FOREIGN KEY(MANH, MAHK) REFERENCES NAMHOC(MANH, MAHK)
 
--- 1 Số thông tin ban đầu 
-INSERT INTO LOGIN_TABLE VALUES
-('admin', 'admin', 'AD'),
-('GV001', 'gv001', 'GV'),
-('GV002', 'gv002', 'GV'),
-('GV003', 'gv003', 'GV')
-
-INSERT INTO GIAOVIEN(MAGV, HOTEN, NGAYSINH, QUEQUAN, EMAIL, SODT, GIOITINH, MATOGV, USERNAME, MONGD) VALUES 
-('GV001', N'Nguyễn An', '1990-05-12', N'Long Xuyên, An Giang', 'nguyenan@gmail.com', '0934235434', N'Nam', null, 'GV001', N'Địa lý'),
-('GV002', N'Nguyễn Văn Đạt', '1994-03-22', N'Long Xuyên, An Giang', 'nguyenvandat@gmail.com', '0325463214', N'Nữ', null, 'GV002', N'Toán'),
-('GV003', N'Lý Kim Hương', '1991-05-11', N'Long Xuyên, An Giang', 'lykimhuong@gmail.com', '0325465549', N'Nam', null, 'GV003', N'GDQP')
-
 --	CREATE STORE PROCDUCE
 CREATE PROC sp_checkLogin_LOGIN_TABLE
 	@tenTK VARCHAR(15),
@@ -178,4 +166,47 @@ BEGIN
 	SELECT * FROM QLHS.dbo.NAMHOC WHERE MAHK = 1
 END
 
+-- 1 Số thông tin ban đầu 
+INSERT INTO LOGIN_TABLE VALUES
+('admin', 'admin', 'AD'),
+('GV001', 'gv001', 'GV'),
+('GV002', 'gv002', 'GV'),
+('GV003', 'gv003', 'GV'),
+('GV004', 'gv004', 'GV'),
+('GV005', 'gv005', 'GV'),
+('GV006', 'gv006', 'GV'),
+('GV007', 'gv007', 'GV'),
+('GV008', 'gv008', 'GV'),
+('GV009', 'gv009', 'GV'),
+('GV010', 'gv010', 'GV')
+
+INSERT INTO GIAOVIEN(MAGV, HOTEN, NGAYSINH, QUEQUAN, EMAIL, SODT, GIOITINH, MATOGV, USERNAME, MONGD) VALUES 
+('GV001', N'Nguyễn An',			'1990-05-12', N'An Giang',		'nguyenan@gmail.com',		'0934235434', N'Nam', null, 'GV001', N'Địa lý'),
+('GV002', N'Nguyễn Văn Đạt',	'1994-03-22', N'An Giang',		'nguyenvandat@gmail.com',	'0325463214', N'Nam', null, 'GV002', N'Toán'),
+('GV003', N'Lý Kim Hương',		'1991-05-11', N'An Giang',		'lykimhuong@gmail.com',		'0325235549', N'Nữ', null, 'GV003', N'GDQP'),
+('GV004', N'Mai Thị Ngọc',		'1989-03-12', N'Cần Thơ',		'maithingoc@gmail.com',		'0355632479', N'Nữ', null, 'GV004', N'Ngữ văn'),
+('GV005', N'Nguyễn Đức Anh',	'1990-07-18', N'Cần Thơ',		'nguyenducanh@gmail.com',	'0863653256', N'Nam', null, 'GV005', N'Hóa học'),
+('GV006', N'Lê Trần Thanh',		'1981-03-31', N'Đồng Tháp',		'letranthanh@gmail.com',	'0757857325', N'Nam', null, 'GV006', N'Lịch sử'),
+('GV007', N'Lý Tuấn Kiệt',		'1995-06-21', N'Tp Hồ Chí Minh','lytuankiet@gmail.com',		'0762225214', N'Nam', null, 'GV007', N'Ngoại ngữ'),
+('GV008', N'Nguyễn Văn Châu',	'1993-02-14', N'An Giang',		'nguyenvanchau@gmail.com',	'0376356537', N'Nam', null, 'GV008', N'Vật lý'),
+('GV009', N'Lê Thị Mỹ Huyền',	'1989-09-12', N'Đồng Tháp',		'lethimyhuyen@gmail.com',	'0226535645', N'Nữ', null, 'GV009', N'GDCD'),
+('GV010', N'Nguyễn Thị Ánh Thơ','2002-10-18', N'An Giang',		'nguyenthianhtho@gmail.com','0163765545', N'Nữ', null, 'GV010', N'Sinh học')
+
+INSERT INTO TOGV(MATOGV, TRUONGTOGV, TENTOGV) VALUES
+('TKHTN','GV002', N'Khoa học tự nhiên'),
+('TKHXH','GV001', N'Khoa học xã hội'),
+('TTDTH','GV003', N'Thể dục thể thao')
+
+INSERT INTO NAMHOC(MANH, MAHK) VALUES
+('N2425', 1),
+('N2425', 2),
+('N2324', 1),
+('N2324', 2)
+
+INSERT INTO LOPHOC(MALOP, TENLOP, SISO, GVCN, MANH, MAHK) VALUES
+('24101', N'Lớp 10A1', 0, 'GV001', 'N2425', 1),
+('24102', N'Lớp 10A2', 0, 'GV002', 'N2425', 1),
+('24103', N'Lớp 10A3', 0, 'GV003', 'N2425', 1),
+('24111', N'Lớp 11A1', 0, 'GV004', 'N2425', 1),
+('24112', N'Lớp 11A2', 0, 'GV005', 'N2425', 1)
 

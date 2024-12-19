@@ -109,7 +109,20 @@ namespace QuanLyHocSinh
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if(this.dgvDanhSach.SelectedRows.Count > 0)
+            {
+                if (DialogResult.Yes == MessageBox.Show("Bạn chắc có muốn xóa.\n Việc xóa không thể hoàn tác lại", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    string result = hocSinhBLL.Delete(this.txtMaSo.Text);
 
+                    this.txtMaSo.Text = string.Empty;
+                    this.txtHoTen.Text = string.Empty;
+                    this.txtDiaChi.Text = string.Empty;
+                    this.mtxtSoDT.Text = string.Empty;
+                    this.cbMaLop.SelectedIndex = -1;
+                    this.cbGioiTinh.SelectedIndex = -1;
+                }
+            }  
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

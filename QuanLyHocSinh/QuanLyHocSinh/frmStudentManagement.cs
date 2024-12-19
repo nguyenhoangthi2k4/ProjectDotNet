@@ -67,7 +67,7 @@ namespace QuanLyHocSinh
             this.SwitchFrom(new frmDiemSo(MaLop));
         }
 
-        private void tsMnuItemDangXuat_btn_Click(object sender, EventArgs e)
+        private void tsMnuItemDangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
         }

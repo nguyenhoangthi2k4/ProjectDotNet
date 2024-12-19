@@ -220,6 +220,47 @@ namespace DAL
             return "Sửa thành công";
         }
 
+        public string Delete(string MaHS)
+        {
+            DataRow dr = DataSet.Tables["tblHOCSINH"].Select($"MAHS = '{MaHS}'")[0];
+            string MaLop = dr["MALOP"].ToString();
+
+            // Get Mã năm học
+            string MaNH = DataSet.Tables["tblLOPHOC"].Select($"MALOP = '{MaLop}'")[0]["MANH"].ToString();
+
+            // Xóa học sinh trong bảng thu ngân
+            DataRow[] rowsTN = DataSet.Tables["tblTHUNGAN"].Select($"MAHS = '{MaHS}' AND MANH = '{MaNH}' AND MAHK IN (1,2)");
+            foreach (DataRow rowTN in rowsTN)
+                rowTN.Delete();
+
+            // Xóa học sinh trong bảng bảng điểm
+            DataRow[] rowsBD = DataSet.Tables["tblBANGDIEM"].Select($"MAHS = '{MaHS}' AND MANH = '{MaNH}' AND MAHK IN (1,2)");
+            foreach (DataRow rowBD in rowsBD)
+                rowBD.Delete();
+
+            // Xóa học sinh trong bảng hạnh kiểm
+            DataRow[] rowsHK = DataSet.Tables["tblHANHKIEM"].Select($"MAHS = '{MaHS}' AND MANH = '{MaNH}' AND MAHK IN (1,2)");
+            foreach(DataRow rowHK in rowsHK)
+                rowHK.Delete();
+
+            // Xóa học sinh trong bảng tài khoản
+            DataRow rowTK = DataSet.Tables["tblLOGINTABLE"].Select($"USERNAME = '{MaHS}'")[0];
+            rowTK.Delete();
+
+            // Chỉnh sửa số lương học sinh trong lớp
+            DataRow rowLop = DataSet.Tables["tblLOPHOC"].Select($"MALOP = '{MaLop}'")[0];
+            rowLop["SISO"] = int.Parse(rowLop["SISO"].ToString()) - 1;
+
+            dr.Delete();
+            Save(_daLopHoc, "tblLOPHOC");            
+            Save(_daThuNgan, "tblTHUNGAN");
+            Save(_daHanhKiem, "tblHANHKIEM");
+            Save(_daBangDiem, "tblBANGDIEM");
+            Save(_da, "tblHOCSINH");
+            Save(_daTk, "tblLOGINTABLE");
+
+            return "Xóa thành công";
+        }
         public void Cancel()
         {
             DataSet.Tables["tblHOCSINH"].RejectChanges();

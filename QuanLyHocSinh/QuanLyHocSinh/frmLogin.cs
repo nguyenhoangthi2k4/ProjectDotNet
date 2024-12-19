@@ -33,6 +33,10 @@ namespace QuanLyHocSinh
             taiKhoan.Taikhoan = this.txtUsername.Text;
             taiKhoan.Matkhau = this.txtPassword.Text;
 
+            this.txtUsername.Text = string.Empty;
+            this.txtPassword.Text = string.Empty;
+            this.txtUsername.Focus();
+
             string user = taiKhoanBLL.CheckLogin(taiKhoan);
             if (user == "Lỗi kết nối")
             {
@@ -61,9 +65,6 @@ namespace QuanLyHocSinh
                 frmThongTin.ShowDialog();
                 this.Show();
             }
-            this.txtUsername.Text = string.Empty;
-            this.txtPassword.Text = string.Empty;
-            this.txtUsername.Focus();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

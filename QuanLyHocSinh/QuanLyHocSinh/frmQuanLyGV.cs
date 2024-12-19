@@ -16,8 +16,7 @@ namespace QuanLyHocSinh
     {
         ToGVBLL toGVBLL = new ToGVBLL();
         GiaoVienBLL giaoVienBLL = new GiaoVienBLL();
-        
-        private bool fGV = false, fToGV = false;
+
         DataTable dtGV;
         DataTable dtToGV;
         public frmQuanLyGV()

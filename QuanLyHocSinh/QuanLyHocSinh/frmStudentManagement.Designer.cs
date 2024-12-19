@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentManagement));
             this.mnuStudentManagement = new System.Windows.Forms.MenuStrip();
-            this.tsMnItemThuNgan = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnContainer = new System.Windows.Forms.Panel();
             this.tsMnItemQuanLy = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnItemDiemSo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnItemDanhGia = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsMnuItemDangXuat_btn = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMnItemThuNgan = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMnuItemDangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnContainer = new System.Windows.Forms.Panel();
             this.mnuStudentManagement.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,28 +52,13 @@
             this.tsMnItemDiemSo,
             this.tsMnItemDanhGia,
             this.tsMnItemThuNgan,
-            this.tsMnuItemDangXuat_btn});
+            this.tsMnuItemDangXuat});
             this.mnuStudentManagement.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.mnuStudentManagement.Location = new System.Drawing.Point(0, 0);
             this.mnuStudentManagement.Name = "mnuStudentManagement";
             this.mnuStudentManagement.Size = new System.Drawing.Size(213, 644);
             this.mnuStudentManagement.TabIndex = 0;
             this.mnuStudentManagement.Text = "menuStrip1";
-            // 
-            // tsMnItemThuNgan
-            // 
-            this.tsMnItemThuNgan.AutoSize = false;
-            this.tsMnItemThuNgan.Name = "tsMnItemThuNgan";
-            this.tsMnItemThuNgan.Size = new System.Drawing.Size(206, 4);
-            // 
-            // pnContainer
-            // 
-            this.pnContainer.BackColor = System.Drawing.SystemColors.Window;
-            this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContainer.Location = new System.Drawing.Point(213, 0);
-            this.pnContainer.Name = "pnContainer";
-            this.pnContainer.Size = new System.Drawing.Size(1265, 644);
-            this.pnContainer.TabIndex = 2;
             // 
             // tsMnItemQuanLy
             // 
@@ -114,17 +99,32 @@
             this.tsMnItemDanhGia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsMnItemDanhGia.Click += new System.EventHandler(this.tsMnItemDanhGia_Click);
             // 
-            // tsMnuItemDangXuat_btn
+            // tsMnItemThuNgan
             // 
-            this.tsMnuItemDangXuat_btn.AutoSize = false;
-            this.tsMnuItemDangXuat_btn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.tsMnuItemDangXuat_btn.Image = global::QuanLyHocSinh.Properties.Resources.exit;
-            this.tsMnuItemDangXuat_btn.Margin = new System.Windows.Forms.Padding(0, 320, 0, 0);
-            this.tsMnuItemDangXuat_btn.Name = "tsMnuItemDangXuat_btn";
-            this.tsMnuItemDangXuat_btn.Size = new System.Drawing.Size(200, 50);
-            this.tsMnuItemDangXuat_btn.Text = "Đăng xuất";
-            this.tsMnuItemDangXuat_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tsMnuItemDangXuat_btn.Click += new System.EventHandler(this.tsMnuItemDangXuat_btn_Click);
+            this.tsMnItemThuNgan.AutoSize = false;
+            this.tsMnItemThuNgan.Name = "tsMnItemThuNgan";
+            this.tsMnItemThuNgan.Size = new System.Drawing.Size(206, 4);
+            // 
+            // tsMnuItemDangXuat
+            // 
+            this.tsMnuItemDangXuat.AutoSize = false;
+            this.tsMnuItemDangXuat.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemDangXuat.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.tsMnuItemDangXuat.Margin = new System.Windows.Forms.Padding(0, 320, 0, 0);
+            this.tsMnuItemDangXuat.Name = "tsMnuItemDangXuat";
+            this.tsMnuItemDangXuat.Size = new System.Drawing.Size(200, 50);
+            this.tsMnuItemDangXuat.Text = "Đăng xuất";
+            this.tsMnuItemDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsMnuItemDangXuat.Click += new System.EventHandler(this.tsMnuItemDangXuat_Click);
+            // 
+            // pnContainer
+            // 
+            this.pnContainer.BackColor = System.Drawing.SystemColors.Window;
+            this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContainer.Location = new System.Drawing.Point(213, 0);
+            this.pnContainer.Name = "pnContainer";
+            this.pnContainer.Size = new System.Drawing.Size(1265, 644);
+            this.pnContainer.TabIndex = 2;
             // 
             // frmStudentManagement
             // 
@@ -151,7 +151,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsMnItemDanhGia;
         private System.Windows.Forms.ToolStripMenuItem tsMnItemThuNgan;
         private System.Windows.Forms.ToolStripMenuItem tsMnItemDiemSo;
-        private System.Windows.Forms.ToolStripMenuItem tsMnuItemDangXuat_btn;
+        private System.Windows.Forms.ToolStripMenuItem tsMnuItemDangXuat;
         private System.Windows.Forms.Panel pnContainer;
     }
 }

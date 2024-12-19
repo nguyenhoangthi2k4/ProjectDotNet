@@ -46,6 +46,11 @@ namespace BLL
             return hocSinhDAL.Update(hs);
         }
 
+        public string Delete(string MaHS)
+        {
+            return hocSinhDAL.Delete(MaHS);
+        }
+
         public void Cancel()
         {
             hocSinhDAL.Cancel();

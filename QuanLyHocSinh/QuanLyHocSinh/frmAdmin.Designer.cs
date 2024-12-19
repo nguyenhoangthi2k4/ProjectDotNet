@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pnContainer = new System.Windows.Forms.Panel();
             this.stMnuItemQLNH = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemQLLH = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemToGV = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,7 +37,8 @@
             this.tsMnuItemQLHS = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemQLTN = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMnuItemQLTK = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsMnuItemDangXuat_btn = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMnuItemDangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnContainer = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             this.tsMnuItemQLHS,
             this.tsMnuItemQLTN,
             this.tsMnuItemQLTK,
-            this.tsMnuItemDangXuat_btn});
+            this.tsMnuItemDangXuat});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -65,15 +65,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(213, 644);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // pnContainer
-            // 
-            this.pnContainer.BackColor = System.Drawing.SystemColors.Window;
-            this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContainer.Location = new System.Drawing.Point(213, 0);
-            this.pnContainer.Name = "pnContainer";
-            this.pnContainer.Size = new System.Drawing.Size(1265, 644);
-            this.pnContainer.TabIndex = 1;
             // 
             // stMnuItemQLNH
             // 
@@ -168,18 +159,27 @@
             this.tsMnuItemQLTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tsMnuItemQLTK.Click += new System.EventHandler(this.tsMnuItemQLTK_Click);
             // 
-            // tsMnuItemDangXuat_btn
+            // tsMnuItemDangXuat
             // 
-            this.tsMnuItemDangXuat_btn.AutoSize = false;
-            this.tsMnuItemDangXuat_btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.tsMnuItemDangXuat_btn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.tsMnuItemDangXuat_btn.Image = global::QuanLyHocSinh.Properties.Resources.exit;
-            this.tsMnuItemDangXuat_btn.Margin = new System.Windows.Forms.Padding(0, 130, 0, 0);
-            this.tsMnuItemDangXuat_btn.Name = "tsMnuItemDangXuat_btn";
-            this.tsMnuItemDangXuat_btn.Size = new System.Drawing.Size(200, 50);
-            this.tsMnuItemDangXuat_btn.Text = "Đăng xuất";
-            this.tsMnuItemDangXuat_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tsMnuItemDangXuat_btn.Click += new System.EventHandler(this.tsMnuItemDangXuat_btn_Click);
+            this.tsMnuItemDangXuat.AutoSize = false;
+            this.tsMnuItemDangXuat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.tsMnuItemDangXuat.ForeColor = System.Drawing.Color.DarkBlue;
+            this.tsMnuItemDangXuat.Image = global::QuanLyHocSinh.Properties.Resources.exit;
+            this.tsMnuItemDangXuat.Margin = new System.Windows.Forms.Padding(0, 130, 0, 0);
+            this.tsMnuItemDangXuat.Name = "tsMnuItemDangXuat";
+            this.tsMnuItemDangXuat.Size = new System.Drawing.Size(200, 50);
+            this.tsMnuItemDangXuat.Text = "Đăng xuất";
+            this.tsMnuItemDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsMnuItemDangXuat.Click += new System.EventHandler(this.tsMnuItemDangXuat_Click);
+            // 
+            // pnContainer
+            // 
+            this.pnContainer.BackColor = System.Drawing.SystemColors.Window;
+            this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContainer.Location = new System.Drawing.Point(213, 0);
+            this.pnContainer.Name = "pnContainer";
+            this.pnContainer.Size = new System.Drawing.Size(1265, 644);
+            this.pnContainer.TabIndex = 1;
             // 
             // frmAdmin
             // 
@@ -209,7 +209,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsMnuItemQLTN;
         private System.Windows.Forms.ToolStripMenuItem tsMnuItemQLTK;
         private System.Windows.Forms.ToolStripMenuItem tsMnuItemQLLH;
-        private System.Windows.Forms.ToolStripMenuItem tsMnuItemDangXuat_btn;
+        private System.Windows.Forms.ToolStripMenuItem tsMnuItemDangXuat;
         private System.Windows.Forms.ToolStripMenuItem tsMnuItemToGV;
     }
 }

@@ -11,9 +11,7 @@ namespace BLL
     public class TaiKhoanBLL
     {
         TaiKhoanDAL taiKhoanDAL = new TaiKhoanDAL();  
-        public TaiKhoanBLL()
-        {
-        }
+        public TaiKhoanBLL() { }
 
         public DataTable GetData()
         {

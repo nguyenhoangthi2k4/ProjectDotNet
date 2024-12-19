@@ -18,7 +18,7 @@ namespace DTO
         public string TenGV { get => _tenGV; set => _tenGV = value; }
         public string NgaySinh { get => _ngaySinh; set => _ngaySinh = value; }
         public string SoDT { get => _soDT; set => _soDT = value; }
-        public string  QueQuan{ get => _queQuan; set => _queQuan = value; }
+        public string QueQuan{ get => _queQuan; set => _queQuan = value; }
         public string Email { get => _email; set => _email = value; }
         public string GioiTinh { get => _gioiTinh; set => _gioiTinh = value; }
         public string MonGD { get => _monGD; set => _monGD = value; }
